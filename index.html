@@ -1,1 +1,984 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nextlink Studio — Agence Digitale Premium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg:        #07090F;
+      --bg2:       #0D1117;
+      --surface:   #111827;
+      --border:    rgba(255,255,255,0.08);
+      --gold:      #C9A84C;
+      --gold-light:#E8C97A;
+      --white:     #F8F9FA;
+      --muted:     #8B9AB0;
+      --accent:    #4F8EF7;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE OVERLAY ─────────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAV ────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 5%;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(7,9,15,0.6);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+      transition: background .3s;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--bg);
+      letter-spacing: -1px;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text span { color: var(--gold); }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--bg) !important;
+      font-weight: 500 !important;
+      padding: 9px 22px;
+      border-radius: 6px;
+      letter-spacing: 0.02em !important;
+      transition: opacity .2s !important;
+    }
+
+    .nav-cta:hover { opacity: .88; color: var(--bg) !important; }
+
+    /* ── HERO ───────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 5% 80px;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+
+    .glow-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+      top: -100px; left: -100px;
+    }
+
+    .glow-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(79,142,247,0.1) 0%, transparent 70%);
+      bottom: -50px; right: 5%;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 40px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 32px;
+      animation: fadeUp .6s ease both;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: .3; }
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      animation: fadeUp .7s .1s ease both;
+    }
+
+    h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 48px;
+      animation: fadeUp .7s .2s ease both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeUp .7s .3s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--bg);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 14px 32px;
+      border-radius: 8px;
+      letter-spacing: 0.02em;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 0 40px rgba(201,168,76,0.2);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(201,168,76,0.35);
+    }
+
+    .btn-primary svg { transition: transform .2s; }
+    .btn-primary:hover svg { transform: translateX(4px); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 15px;
+      padding: 14px 24px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: border-color .2s, background .2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.04);
+    }
+
+    /* hero scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: 40px; left: 5%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      animation: fadeUp .7s .5s ease both;
+    }
+
+    .scroll-line {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(to right, var(--gold), transparent);
+    }
+
+    /* ── CLIENTS STRIP ──────────────────────────────── */
+    .clients {
+      padding: 40px 5%;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+    }
+
+    .clients-label {
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .clients-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      opacity: 0.45;
+      filter: grayscale(1);
+    }
+
+    .client-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--white);
+    }
+
+    /* ── SERVICES ───────────────────────────────────── */
+    section { padding: 100px 5%; }
+
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 480px;
+      margin-bottom: 64px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2px;
+    }
+
+    .service-card {
+      background: var(--surface);
+      padding: 40px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: background .25s;
+      cursor: default;
+    }
+
+    .service-card:first-child { border-radius: 16px 0 0 0; }
+    .service-card:nth-child(2) { border-radius: 0 16px 0 0; }
+    .service-card:nth-last-child(2) { border-radius: 0 0 0 16px; }
+    .service-card:last-child { border-radius: 0 0 16px 0; }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .service-card:hover { background: #161D2A; }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 48px; height: 48px;
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      color: var(--gold);
+      transition: border-color .3s, background .3s;
+    }
+
+    .service-card:hover .service-icon {
+      border-color: rgba(201,168,76,0.5);
+      background: rgba(201,168,76,0.08);
+    }
+
+    .service-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .service-desc {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .service-arrow {
+      margin-top: 28px;
+      color: var(--gold);
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity .25s, transform .25s;
+      font-size: 20px;
+    }
+
+    .service-card:hover .service-arrow { opacity: 1; transform: translateX(0); }
+
+    /* ── STATS ──────────────────────────────────────── */
+    .stats {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 5%;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 48px;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── PROCESS ────────────────────────────────────── */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      counter-reset: step;
+    }
+
+    .process-step {
+      counter-increment: step;
+      padding: 36px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      position: relative;
+      transition: border-color .3s, background .3s;
+    }
+
+    .process-step:hover {
+      border-color: rgba(201,168,76,0.3);
+      background: rgba(201,168,76,0.03);
+    }
+
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.05);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .step-desc {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ── TESTIMONIALS ───────────────────────────────── */
+    .testimonials { background: var(--bg2); }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px;
+      position: relative;
+      transition: border-color .3s;
+    }
+
+    .testimonial-card:hover { border-color: rgba(201,168,76,0.25); }
+
+    .stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 20px;
+    }
+
+    .star { color: var(--gold); font-size: 14px; }
+
+    .testimonial-text {
+      font-size: 15px;
+      color: rgba(248,249,250,0.85);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .author-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--accent));
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--bg);
+      flex-shrink: 0;
+    }
+
+    .author-name {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .author-role {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ── CTA ────────────────────────────────────────── */
+    .cta-section {
+      padding: 120px 5%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(ellipse, rgba(201,168,76,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section h2 {
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .cta-section .section-sub {
+      margin: 0 auto 48px;
+      text-align: center;
+      max-width: 440px;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    footer {
+      padding: 60px 5% 40px;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+
+    .footer-brand p {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 260px;
+      margin-top: 16px;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col a {
+      color: rgba(248,249,250,0.6);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color .2s;
+    }
+
+    .footer-col a:hover { color: var(--white); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-bottom p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-link {
+      width: 36px; height: 36px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: border-color .2s, color .2s, background .2s;
+    }
+
+    .social-link:hover {
+      border-color: rgba(201,168,76,0.4);
+      color: var(--gold);
+      background: rgba(201,168,76,0.06);
+    }
+
+    /* ── ANIMATIONS ─────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── DIVIDER ────────────────────────────────────── */
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(to right, var(--gold), transparent);
+      margin-bottom: 48px;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { padding-top: 100px; }
+      .hero-actions { flex-direction: column; }
+      .footer-top { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-mark">NL</div>
+      <span class="logo-text">Nextlink<span>Studio</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Méthode</a></li>
+      <li><a href="#temoignages">Références</a></li>
+      <li><a href="#contact" class="nav-cta">Démarrer un projet</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">Agence digitale — Paris &amp; Remote</div>
+      <h1>Des expériences digitales<br/><em>qui convertissent.</em></h1>
+      <p class="hero-sub">
+        Nous concevons des sites web et des stratégies digitales sur mesure pour les marques ambitieuses — de la stratégie à la mise en ligne.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          Démarrer un projet
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn-secondary">
+          Découvrir nos services
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <div class="clients">
+    <p class="clients-label">Ils nous font confiance</p>
+    <div class="clients-logos">
+      <span class="client-logo">Maison Leblanc</span>
+      <span class="client-logo">Architek</span>
+      <span class="client-logo">Lumière & Co</span>
+      <span class="client-logo">Vega Group</span>
+      <span class="client-logo">NordCap</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="reveal">
+      <span class="section-label">Ce que nous faisons</span>
+      <h2>Un savoir-faire<br/>à 360°</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <div class="service-title">Design &amp; UX</div>
+        <p class="service-desc">Interfaces élégantes pensées pour l'expérience utilisateur. Chaque pixel a une intention.</p>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <div class="service-title">Développement Web</div>
+        <p class="service-desc">Sites et applications performants, scalables, sécurisés. Du code propre, livré dans les délais.</p>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="service-title">Branding &amp; Identité</div>
+        <p class="service-desc">Logos, chartes graphiques et systèmes de design qui ancrent votre marque dans l'esprit de vos clients.</p>
+        <div class="service-arrow">→</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="service-title">SEO &amp; Acquisition</div>
+        <p class="service-desc">Stratégies de référencement et de contenus pour générer un trafic qualifié et durable.</p>
+        <div class="service-arrow">→</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stats-grid">
+      <div class="reveal">
+        <div class="stat-number">120+</div>
+        <div class="stat-label">Projets livrés</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">8</div>
+        <div class="stat-label">Années d'expérience</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">97%</div>
+        <div class="stat-label">Satisfaction client</div>
+      </div>
+      <div class="reveal">
+        <div class="stat-number">3×</div>
+        <div class="stat-label">Taux de conversion moyen</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="reveal">
+      <span class="section-label">Notre méthode</span>
+      <h2>Un process<br/>éprouvé</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-title">Découverte</div>
+        <p class="step-desc">Audit de votre existant, analyse de vos concurrents et définition des objectifs stratégiques.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">02</div>
+        <div class="step-title">Conception</div>
+        <p class="step-desc">Wireframes, maquettes interactives et validation de chaque écran avant le moindre code.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">03</div>
+        <div class="step-title">Développement</div>
+        <p class="step-desc">Intégration rigoureuse, tests multi-devices et optimisation des performances.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-num">04</div>
+        <div class="step-title">Lancement &amp; Suivi</div>
+        <p class="step-desc">Mise en ligne accompagnée, formation et suivi des indicateurs de performance post-launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="temoignages">
+    <div class="reveal">
+      <span class="section-label">Témoignages</span>
+      <h2>Ce que disent<br/>nos clients</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-text">"Nextlink Studio a su traduire notre vision en une identité digitale forte. Le résultat dépasse nos attentes — notre taux de conversion a doublé en 3 mois."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SL</div>
+          <div>
+            <div class="author-name">Sophie Laurent</div>
+            <div class="author-role">Directrice Marketing, Architek</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-text">"Une équipe à l'écoute, professionnelle et créative. Ils ont respecté le budget et les délais à la lettre. Je recommande sans hésitation."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MB</div>
+          <div>
+            <div class="author-name">Marc Beaumont</div>
+            <div class="author-role">CEO, NordCap</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <p class="testimonial-text">"Notre nouveau site est exactement ce que nous cherchions : élégant, rapide et pensé pour nos clients. Un partenaire de confiance pour la durée."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">CL</div>
+          <div>
+            <div class="author-name">Claire Moreau</div>
+            <div class="author-role">Fondatrice, Lumière &amp; Co</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="contact">
+    <div class="reveal">
+      <span class="section-label">Parlons de votre projet</span>
+      <h2>Prêt à passer<br/><em>au niveau supérieur ?</em></h2>
+      <p class="section-sub">Un échange de 30 minutes suffit pour définir si nous sommes le bon partenaire pour vous.</p>
+      <a href="mailto:contact@nextlinkstudio.fr" class="btn-primary">
+        Prendre rendez-vous
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <div class="logo-mark">NL</div>
+          <span class="logo-text">Nextlink<span>Studio</span></span>
+        </a>
+        <p>Agence digitale premium spécialisée dans la conception de sites web et d'expériences de marque mémorables.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Design &amp; UX</a></li>
+          <li><a href="#">Développement Web</a></li>
+          <li><a href="#">Branding</a></li>
+          <li><a href="#">SEO &amp; Acquisition</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Agence</h4>
+        <ul>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Nos réalisations</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@nextlinkstudio.fr">contact@nextlinkstudio.fr</a></li>
+          <li><a href="tel:+33123456789">+33 1 23 45 67 89</a></li>
+          <li><a href="#">Paris, France</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Nextlink Studio. Tous droits réservés.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-link" aria-label="Instagram">ig</a>
+        <a href="#" class="social-link" aria-label="Twitter/X">𝕏</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
