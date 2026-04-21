@@ -24,7 +24,7 @@
         <li><a href="tarifs.html">Tarifs</a></li>
         <li><a href="index.html#temoignages">Témoignages</a></li>
       </ul>
-      <a href="index.html#contact" class="btn btn-primary nav-cta">Devis gratuit</a>
+      <a href="devis.html" class="btn btn-primary nav-cta">Devis gratuit</a>
       <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
@@ -35,7 +35,7 @@
     <a href="realisations.html" onclick="toggleMenu()">Nos réalisations</a>
     <a href="tarifs.html" onclick="toggleMenu()">Tarifs</a>
     <a href="index.html#temoignages" onclick="toggleMenu()">Témoignages</a>
-    <a href="index.html#contact" class="btn btn-primary btn-lg" onclick="toggleMenu()">Devis gratuit</a>
+    <a href="devis.html" class="btn btn-primary btn-lg" onclick="toggleMenu()">Devis gratuit</a>
   </div>
 
   <!-- HERO -->
@@ -51,7 +51,7 @@
         On crée votre site vitrine avec devis en ligne et réservation de créneaux — livré en 7 jours. Vous vous concentrez sur votre métier, on s'occupe du reste.
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary btn-lg">Obtenir mon devis gratuit</a>
+        <a href="devis.html" class="btn btn-primary btn-lg">Obtenir mon devis gratuit</a>
         <a href="realisations.html" class="btn btn-ghost btn-lg">Voir nos réalisations →</a>
       </div>
       <div class="hero-marquee">
@@ -172,7 +172,7 @@
         </div>
       </div>
       <div class="how-cta">
-        <a href="#contact" class="btn btn-primary btn-lg">Commencer maintenant — c'est gratuit</a>
+        <a href="devis.html" class="btn btn-primary btn-lg">Commencer maintenant — c'est gratuit</a>
       </div>
     </div>
   </section>
@@ -287,85 +287,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-text">
-          <div class="section-badge">Contact</div>
-          <h2>Parlons de<br /><span class="gradient-text">votre projet</span></h2>
-          <p>Remplissez ce formulaire et on vous recontacte sous 24h — sans engagement, sans jargon, juste une vraie conversation sur ce qu'on peut faire pour vous.</p>
-          <div class="contact-reassurance">
-            <div class="reassurance-item"><span class="ri-icon">⚡</span><span>Réponse sous 24h garantie</span></div>
-            <div class="reassurance-item"><span class="ri-icon">🎯</span><span>Devis personnalisé et gratuit</span></div>
-            <div class="reassurance-item"><span class="ri-icon">🤝</span><span>Sans engagement</span></div>
-          </div>
-        </div>
-        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="prenom">Prénom *</label>
-              <input type="text" id="prenom" name="prenom" placeholder="Jean" required />
-            </div>
-            <div class="form-group">
-              <label for="nom">Nom *</label>
-              <input type="text" id="nom" name="nom" placeholder="Dupont" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="metier">Votre métier *</label>
-            <select id="metier" name="metier" required>
-              <option value="">Sélectionnez votre métier</option>
-              <option>Plombier</option>
-              <option>Électricien</option>
-              <option>Menuisier</option>
-              <option>Peintre en bâtiment</option>
-              <option>Carreleur</option>
-              <option>Maçon</option>
-              <option>Couvreur</option>
-              <option>Serrurier</option>
-              <option>Chauffagiste</option>
-              <option>Autre artisan / indépendant</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required />
-            </div>
-            <div class="form-group">
-              <label for="tel">Téléphone</label>
-              <input type="tel" id="tel" name="tel" placeholder="06 12 34 56 78" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="offre">Offre qui vous intéresse</label>
-            <select id="offre" name="offre">
-              <option value="">Je ne sais pas encore</option>
-              <option>Essentiel — 790€</option>
-              <option>Pro — 1 290€</option>
-              <option>Prestige — 1 890€</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Dites-nous en plus (optionnel)</label>
-            <textarea id="message" name="message" rows="3" placeholder="Votre zone d'intervention, vos besoins spécifiques..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-full">
-            <span class="btn-text">Envoyer ma demande →</span>
-            <span class="btn-loading" style="display:none">Envoi en cours...</span>
-          </button>
-          <p class="form-legal">En soumettant ce formulaire, vous acceptez d'être recontacté par NextLink Studio. Aucune donnée n'est revendue.</p>
-        </form>
-        <div class="form-success" id="formSuccess" style="display:none">
-          <div class="success-icon">✅</div>
-          <h3>Demande envoyée !</h3>
-          <p>Merci, on vous recontacte sous 24h pour discuter de votre projet.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -391,7 +312,7 @@
           <li><a href="realisations.html">Nos réalisations</a></li>
           <li><a href="tarifs.html">Tarifs</a></li>
           <li><a href="index.html#temoignages">Témoignages</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="devis.html">Devis gratuit</a></li>
         </ul>
       </div>
       <div class="footer-links">
