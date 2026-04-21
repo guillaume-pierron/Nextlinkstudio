@@ -1139,11 +1139,13 @@ body {
   .services-grid  { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .footer-inner   { grid-template-columns: 1fr; gap: 32px; }
+  .hero           { padding: 60px 0 72px; }
   .hero-actions   { flex-direction: column; align-items: center; }
   .hero-actions .btn { width: 100%; max-width: 340px; }
   .form-row       { grid-template-columns: 1fr; }
-  .hero-stats     { padding: 16px 20px; gap: 0; }
-  .stat           { padding: 0 14px; }
+  .hero-stats     { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; padding: 16px 0; gap: 0; }
+  .stat           { padding: 12px 0; border-right: 1px solid var(--border-strong); }
+  .stat:last-child{ border-right: none; }
   .stat strong    { font-size: 22px; }
   .stat-sep       { display: none; }
   .deliverables-grid { grid-template-columns: 1fr; }
