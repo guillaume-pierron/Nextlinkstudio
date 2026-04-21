@@ -15,7 +15,7 @@ document.addEventListener('click', function(e) {
 /* ── NAV SHADOW ── */
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('.nav-wrapper');
-  if (nav) nav.style.boxShadow = window.scrollY > 20 ? '0 4px 32px rgba(0,0,0,0.3)' : 'none';
+  if (nav) nav.style.boxShadow = window.scrollY > 20 ? '0 4px 40px rgba(0,0,0,0.6), 0 1px 0 rgba(175,102,232,0.12)' : 'none';
 });
 
 /* ── FORMULAIRE CONTACT ── */
@@ -93,8 +93,8 @@ if (expertiseSections.length) {
       if (entry.isIntersecting) {
         const id = entry.target.id;
         navLinks.forEach(a => {
-          a.style.color = a.href.includes(id) ? 'var(--orange)' : '';
-          a.style.borderBottomColor = a.href.includes(id) ? 'var(--orange)' : 'transparent';
+          a.style.color = a.href.includes(id) ? 'var(--purple-vivid)' : '';
+          a.style.borderBottomColor = a.href.includes(id) ? 'var(--purple)' : 'transparent';
         });
       }
     });
