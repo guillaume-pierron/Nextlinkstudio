@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarifs — NextLink Studio</title>
+  <meta name="description" content="Des offres claires, sans mauvaises surprises. Site web pro, identité visuelle et LinkedIn pour artisans à partir de 790€." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav-wrapper">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">NextLink<strong>Studio</strong></span>
+      </a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="expertise.html" class="nav-has-dropdown">Expertise <span class="nav-arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <a href="expertise.html#sites-web" class="dropdown-item">
+              <span class="di-icon">🌐</span>
+              <span><strong>Création de site web</strong><small>Site vitrine professionnel, SEO local</small></span>
+            </a>
+            <a href="expertise.html#identite" class="dropdown-item">
+              <span class="di-icon">🎨</span>
+              <span><strong>Identité visuelle</strong><small>Logo, charte graphique, supports</small></span>
+            </a>
+            <a href="expertise.html#linkedin" class="dropdown-item">
+              <span class="di-icon">💼</span>
+              <span><strong>Posts LinkedIn</strong><small>Contenu, stratégie, visibilité</small></span>
+            </a>
+          </div>
+        </li>
+        <li><a href="realisations.html">Nos réalisations</a></li>
+        <li><a href="tarifs.html" class="active">Tarifs</a></li>
+        <li><a href="index.html#temoignages">Témoignages</a></li>
+      </ul>
+      <a href="index.html#contact" class="btn btn-primary nav-cta">Devis gratuit</a>
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="navMobile">
+      <a href="expertise.html" onclick="toggleMenu()">Expertise</a>
+      <a href="expertise.html#sites-web" onclick="toggleMenu()" class="nav-mobile-sub">↳ Création de site web</a>
+      <a href="expertise.html#identite" onclick="toggleMenu()" class="nav-mobile-sub">↳ Identité visuelle</a>
+      <a href="expertise.html#linkedin" onclick="toggleMenu()" class="nav-mobile-sub">↳ Posts LinkedIn</a>
+      <a href="realisations.html" onclick="toggleMenu()">Nos réalisations</a>
+      <a href="tarifs.html" onclick="toggleMenu()">Tarifs</a>
+      <a href="index.html#temoignages" onclick="toggleMenu()">Témoignages</a>
+      <a href="index.html#contact" class="btn btn-primary" onclick="toggleMenu()">Devis gratuit</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container page-hero-content">
+      <div class="page-breadcrumb"><a href="index.html">Accueil</a> / <span>Tarifs</span></div>
+      <h1>Des tarifs <span class="gradient-text">clairs & honnêtes</span></h1>
+      <p>Pas d'abonnement caché, pas de frais supplémentaires. Vous savez exactement ce que vous payez avant de signer.</p>
+    </div>
+  </section>
+
+  <!-- GRILLE TARIFS -->
+  <section class="tarifs-page">
+    <div class="container">
+      <div class="pricing-grid-page">
+
+        <div class="pricing-card-page">
+          <div class="pcp-header">
+            <div class="pcp-icon">🌐</div>
+            <div class="pcp-name">Essentiel</div>
+            <div class="pcp-price"><span>790</span>€</div>
+            <div class="pcp-billing">paiement unique</div>
+            <p class="pcp-pitch">Le démarrage idéal pour les artisans qui veulent une présence professionnelle en ligne rapidement.</p>
+          </div>
+          <div class="pcp-body">
+            <div class="pcp-section-title">Site web</div>
+            <ul class="pcp-features">
+              <li class="yes">Site vitrine 5 pages</li>
+              <li class="yes">Design professionnel sur mesure</li>
+              <li class="yes">Optimisation SEO local</li>
+              <li class="yes">Adapté mobile & tablette</li>
+              <li class="yes">Formulaire de contact</li>
+              <li class="yes">Hébergement 1 an offert</li>
+              <li class="yes">Nom de domaine inclus</li>
+              <li class="no">Devis en ligne</li>
+              <li class="no">Réservation de créneaux</li>
+            </ul>
+            <div class="pcp-section-title">Identité visuelle</div>
+            <ul class="pcp-features">
+              <li class="no">Logo</li>
+              <li class="no">Charte graphique</li>
+              <li class="no">Supports de communication</li>
+            </ul>
+            <div class="pcp-section-title">LinkedIn</div>
+            <ul class="pcp-features">
+              <li class="no">Posts LinkedIn</li>
+            </ul>
+          </div>
+          <div class="pcp-footer">
+            <a href="index.html#contact" class="btn btn-outline btn-full">Choisir Essentiel</a>
+          </div>
+        </div>
+
+        <div class="pricing-card-page featured">
+          <div class="pcp-popular">⭐ Le plus choisi</div>
+          <div class="pcp-header">
+            <div class="pcp-icon">🚀</div>
+            <div class="pcp-name">Pro</div>
+            <div class="pcp-price"><span>1 290</span>€</div>
+            <div class="pcp-billing">paiement unique</div>
+            <p class="pcp-pitch">L'offre complète pour les artisans qui veulent travailler moins le téléphone et plus sur le chantier.</p>
+          </div>
+          <div class="pcp-body">
+            <div class="pcp-section-title">Site web</div>
+            <ul class="pcp-features">
+              <li class="yes">Site vitrine <strong>8 pages</strong></li>
+              <li class="yes">Design premium sur mesure</li>
+              <li class="yes">SEO local avancé</li>
+              <li class="yes">Adapté mobile & tablette</li>
+              <li class="yes">Formulaire de contact</li>
+              <li class="yes">Hébergement 1 an offert</li>
+              <li class="yes">Nom de domaine inclus</li>
+              <li class="yes"><strong>Devis en ligne intégré</strong></li>
+              <li class="yes"><strong>Réservation de créneaux</strong></li>
+            </ul>
+            <div class="pcp-section-title">Identité visuelle</div>
+            <ul class="pcp-features">
+              <li class="yes"><strong>Logo offert</strong></li>
+              <li class="yes">Charte graphique</li>
+              <li class="no">Supports de communication</li>
+            </ul>
+            <div class="pcp-section-title">LinkedIn</div>
+            <ul class="pcp-features">
+              <li class="no">Posts LinkedIn</li>
+            </ul>
+          </div>
+          <div class="pcp-footer">
+            <a href="index.html#contact" class="btn btn-primary btn-full">Choisir Pro</a>
+          </div>
+        </div>
+
+        <div class="pricing-card-page">
+          <div class="pcp-header">
+            <div class="pcp-icon">👑</div>
+            <div class="pcp-name">Prestige</div>
+            <div class="pcp-price"><span>1 890</span>€</div>
+            <div class="pcp-billing">+ 149€/mois (LinkedIn)</div>
+            <p class="pcp-pitch">Pour les artisans qui visent haut : image impeccable, présence maximale, croissance continue.</p>
+          </div>
+          <div class="pcp-body">
+            <div class="pcp-section-title">Site web</div>
+            <ul class="pcp-features">
+              <li class="yes">Site <strong>illimité en pages</strong></li>
+              <li class="yes">Design premium sur mesure</li>
+              <li class="yes">SEO local avancé</li>
+              <li class="yes">Adapté mobile & tablette</li>
+              <li class="yes">Formulaire de contact</li>
+              <li class="yes"><strong>Hébergement offert à vie</strong></li>
+              <li class="yes">Nom de domaine inclus</li>
+              <li class="yes">Devis en ligne intégré</li>
+              <li class="yes">Réservation de créneaux</li>
+            </ul>
+            <div class="pcp-section-title">Identité visuelle</div>
+            <ul class="pcp-features">
+              <li class="yes">Logo offert</li>
+              <li class="yes">Charte graphique complète</li>
+              <li class="yes">Supports de communication</li>
+            </ul>
+            <div class="pcp-section-title">LinkedIn</div>
+            <ul class="pcp-features">
+              <li class="yes"><strong>8 posts/mois</strong></li>
+              <li class="yes">Rédaction + visuels</li>
+              <li class="yes">Rapport mensuel</li>
+            </ul>
+          </div>
+          <div class="pcp-footer">
+            <a href="index.html#contact" class="btn btn-outline btn-full">Choisir Prestige</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- OPTIONS À LA CARTE -->
+      <div class="options-carte">
+        <h3>Options à la carte</h3>
+        <p>Vous voulez ajouter un service à votre offre ? C'est possible.</p>
+        <div class="options-grid">
+          <div class="option-item">
+            <span class="option-icon">🎨</span>
+            <div>
+              <strong>Logo seul</strong>
+              <span>290€</span>
+            </div>
+          </div>
+          <div class="option-item">
+            <span class="option-icon">💼</span>
+            <div>
+              <strong>Posts LinkedIn (4/mois)</strong>
+              <span>99€/mois</span>
+            </div>
+          </div>
+          <div class="option-item">
+            <span class="option-icon">💼</span>
+            <div>
+              <strong>Posts LinkedIn (8/mois)</strong>
+              <span>149€/mois</span>
+            </div>
+          </div>
+          <div class="option-item">
+            <span class="option-icon">📅</span>
+            <div>
+              <strong>Réservation créneaux seule</strong>
+              <span>+150€</span>
+            </div>
+          </div>
+          <div class="option-item">
+            <span class="option-icon">📋</span>
+            <div>
+              <strong>Devis en ligne seul</strong>
+              <span>+120€</span>
+            </div>
+          </div>
+          <div class="option-item">
+            <span class="option-icon">📄</span>
+            <div>
+              <strong>Supports print (cartes, flyers)</strong>
+              <span>à partir de 90€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">FAQ</div>
+        <h2>Questions <span class="gradient-text">fréquentes</span></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Y a-t-il des frais cachés après la livraison ?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Non. Le prix affiché est le prix final. L'hébergement est offert la première année (Essentiel & Pro) ou à vie (Prestige). Au renouvellement, l'hébergement coûte environ 8€/mois — et on vous prévient bien à l'avance.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Est-ce que je peux payer en plusieurs fois ?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, on propose un paiement en 2 ou 3 fois sans frais. 50% à la commande, le reste à la livraison — ou en 3 mensualités selon votre offre. Demandez-nous lors de votre appel de démarrage.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Combien de temps prend la création du site ?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>7 jours ouvrés pour l'offre Essentiel, 10 jours pour Pro et Prestige. Ce délai court devient possible parce qu'on travaille avec un processus rodé et qu'on vous guide efficacement pour récupérer vos contenus.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Est-ce que je pourrai modifier mon site moi-même ?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Oui. On vous livre un site avec une interface simple pour modifier vos textes, vos photos et vos tarifs sans toucher une ligne de code. On vous forme lors de la livraison — comptez 30 minutes.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Que se passe-t-il si je ne suis pas satisfait ?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>On retravaille jusqu'à ce que vous soyez satisfait — c'est notre engagement. On inclut des révisions illimitées pendant la phase de création. Si malgré tout le projet ne répond pas à vos attentes, on vous rembourse intégralement.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Mon site sera-t-il visible sur Google rapidement ?</span>
+            <span class="faq-arrow">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Le référencement naturel prend du temps — en général 4 à 8 semaines pour des résultats visibles. Certains de nos clients apparaissent en page 1 dès 45 jours. On fait tout ce qui est en notre pouvoir : structure technique, mots-clés locaux, Google Business Profile.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="page-cta">
+    <div class="container">
+      <div class="page-cta-inner">
+        <h2>Pas sûr de votre choix ?</h2>
+        <p>On vous conseille gratuitement lors d'un appel de 30 min. Sans engagement, sans jargon.</p>
+        <div class="page-cta-actions">
+          <a href="index.html#contact" class="btn btn-primary btn-lg">Prendre rendez-vous gratuitement</a>
+          <a href="realisations.html" class="btn btn-ghost btn-lg">Voir nos réalisations →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text">NextLink<strong>Studio</strong></span></a>
+        <p>On aide les artisans et indépendants à se faire connaître en ligne — rapidement, simplement, efficacement.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h5>Expertise</h5>
+        <ul>
+          <li><a href="expertise.html#sites-web">Création de site web</a></li>
+          <li><a href="expertise.html#identite">Identité visuelle</a></li>
+          <li><a href="expertise.html#linkedin">Posts LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Agence</h5>
+        <ul>
+          <li><a href="realisations.html">Nos réalisations</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="index.html#temoignages">Témoignages</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@nextlinkstudio.fr">hello@nextlinkstudio.fr</a></li>
+          <li><a href="tel:+33600000000">06 00 00 00 00</a></li>
+          <li>Paris — France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2024 NextLink Studio — Tous droits réservés</p>
+      <div class="footer-legal">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
