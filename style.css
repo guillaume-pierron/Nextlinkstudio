@@ -778,19 +778,30 @@ body {
   position: sticky;
   top: 68px;
   z-index: 90;
+  padding: 12px 0;
 }
-.expertise-nav .container { display: flex; gap: 0; flex-wrap: wrap; justify-content: center; }
+.expertise-nav .container { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
 .expertise-nav a {
-  padding: 16px 24px;
-  font-size: 14px; font-weight: 600;
+  padding: 10px 20px;
+  font-size: 13px; font-weight: 600;
   color: var(--text-muted);
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 99px;
+  background: var(--bg-card);
   white-space: nowrap;
   transition: var(--transition);
 }
-.expertise-nav a:hover  { color: var(--purple-vivid); border-bottom-color: var(--purple); }
-.expertise-nav a.active { color: var(--purple-vivid); border-bottom-color: var(--purple); }
+.expertise-nav a:hover { 
+  color: var(--purple-vivid); 
+  border-color: var(--purple); 
+  background: var(--purple-light); 
+}
+.expertise-nav a.active { 
+  color: var(--purple-vivid); 
+  border-color: var(--purple); 
+  background: var(--purple-soft); 
+}
 
 /* ── EXPERTISE SECTIONS ── */
 .expertise-section { padding: 96px 0; border-bottom: 1px solid var(--border); background: var(--bg); }

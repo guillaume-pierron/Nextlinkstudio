@@ -103,8 +103,10 @@ if (expertiseSections.length) {
       if (entry.isIntersecting) {
         const id = entry.target.id;
         navLinks.forEach(a => {
-          a.style.color = a.href.includes(id) ? 'var(--purple-vivid)' : '';
-          a.style.borderBottomColor = a.href.includes(id) ? 'var(--purple)' : 'transparent';
+          const isActive = a.href.includes(id);
+          a.style.color = isActive ? 'var(--purple-vivid)' : '';
+          a.style.borderColor = isActive ? 'var(--purple)' : '';
+          a.style.backgroundColor = isActive ? 'var(--purple-soft)' : '';
         });
       }
     });
