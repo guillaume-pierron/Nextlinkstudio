@@ -2,13 +2,23 @@
 
 /* ── MENU MOBILE ── */
 function toggleMenu() {
-  document.getElementById('navMobile').classList.toggle('open');
+  const navMobile = document.getElementById('navMobile');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const isOpen = navMobile.classList.toggle('open');
+  if (menuToggle) menuToggle.classList.toggle('active');
+  
+  // Empêche le défilement de la page en arrière-plan quand le menu est ouvert
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 
 document.addEventListener('click', function(e) {
   const nav = document.querySelector('.nav-wrapper');
-  if (nav && !nav.contains(e.target)) {
-    document.getElementById('navMobile').classList.remove('open');
+  const navMobile = document.getElementById('navMobile');
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (nav && !nav.contains(e.target) && navMobile.classList.contains('open')) {
+    navMobile.classList.remove('open');
+    if (menuToggle) menuToggle.classList.remove('active');
+    document.body.style.overflow = '';
   }
 });
 
