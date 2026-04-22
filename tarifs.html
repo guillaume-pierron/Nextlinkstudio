@@ -19,23 +19,69 @@
         <img src="logo.svg" alt="NextLink Studio">
       </a>
       <ul class="nav-links">
-        <li><a href="expertise.html">Expertise</a></li>
+        <li class="nav-dropdown">
+          <a href="expertise.html" class="nav-has-dropdown">Expertise <span class="nav-arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-inner">
+              <div class="dm-header">Nos expertises</div>
+              <a href="site-web.html" class="dropdown-item di-web">
+                <div class="di-icon-wrap"><span>🌐</span></div>
+                <div class="di-text"><strong>Création de site web</strong><small>Design sur mesure, livré en 7 jours</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <a href="identite-visuelle.html" class="dropdown-item di-design">
+                <div class="di-icon-wrap"><span>🎨</span></div>
+                <div class="di-text"><strong>Identité visuelle</strong><small>Logo, charte graphique, supports</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <a href="posts-linkedin.html" class="dropdown-item di-linkedin">
+                <div class="di-icon-wrap"><span>💼</span></div>
+                <div class="di-text"><strong>Posts LinkedIn</strong><small>Contenus et visuels pour vos réseaux</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <a href="creation-print.html" class="dropdown-item di-print">
+                <div class="di-icon-wrap"><span>🖨️</span></div>
+                <div class="di-text"><strong>Création print</strong><small>Flyers, kakémonos, cartes de visite</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <div class="dm-footer"><a href="expertise.html">Voir toutes nos expertises →</a></div>
+            </div>
+          </div>
+        </li>
         <li><a href="realisations.html">Nos réalisations</a></li>
         <li><a href="tarifs.html" class="active">Tarifs</a></li>
         <li><a href="index.html#temoignages">Témoignages</a></li>
       </ul>
-      <a href="index.html#contact" class="btn btn-primary nav-cta">Devis gratuit</a>
+      <a href="devis.html" class="btn btn-primary nav-cta">Devis gratuit</a>
       <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
   <div class="nav-mobile" id="navMobile">
-    <a href="expertise.html" onclick="toggleMenu()">Expertise</a>
-    <a href="realisations.html" onclick="toggleMenu()">Nos réalisations</a>
-    <a href="tarifs.html" onclick="toggleMenu()">Tarifs</a>
-    <a href="index.html#temoignages" onclick="toggleMenu()">Témoignages</a>
-    <a href="index.html#contact" class="btn btn-primary btn-lg" onclick="toggleMenu()">Devis gratuit</a>
+    <div class="nav-mobile-inner">
+      <div class="nav-mobile-nav">
+        <div class="nav-mobile-group">
+          <button class="nav-mobile-toggle" onclick="toggleExpertise(this)">
+            <span class="nav-mobile-toggle-left"><span class="nm-num">01</span>Expertise</span>
+            <span class="nav-mobile-arrow">▾</span>
+          </button>
+          <div class="nav-mobile-submenu"><div class="nav-mobile-submenu-inner">
+            <a href="site-web.html" onclick="toggleMenu()"><span class="nm-service-icon">🌐</span>Création de site web</a>
+            <a href="identite-visuelle.html" onclick="toggleMenu()"><span class="nm-service-icon">🎨</span>Identité visuelle</a>
+            <a href="posts-linkedin.html" onclick="toggleMenu()"><span class="nm-service-icon">💼</span>Posts LinkedIn</a>
+            <a href="creation-print.html" onclick="toggleMenu()"><span class="nm-service-icon">🖨️</span>Création print</a>
+          </div></div>
+        </div>
+        <a href="realisations.html" onclick="toggleMenu()"><span class="nm-num">02</span>Nos réalisations</a>
+        <a href="tarifs.html" onclick="toggleMenu()"><span class="nm-num">03</span>Tarifs</a>
+        <a href="index.html#temoignages" onclick="toggleMenu()"><span class="nm-num">04</span>Témoignages</a>
+      </div>
+      <div class="nav-mobile-cta">
+        <a href="devis.html" class="btn btn-primary" onclick="toggleMenu()">Devis gratuit →</a>
+        <p class="nav-mobile-tagline">Votre projet mérite le meilleur.</p>
+      </div>
+    </div>
   </div>
 
   <!-- PAGE HERO -->
@@ -86,7 +132,7 @@
             </ul>
           </div>
           <div class="pcp-footer">
-            <a href="index.html#contact" class="btn btn-outline btn-full">Choisir Essentiel</a>
+            <a href="devis.html" class="btn btn-outline btn-full">Choisir Essentiel</a>
           </div>
         </div>
 
@@ -124,7 +170,7 @@
             </ul>
           </div>
           <div class="pcp-footer">
-            <a href="index.html#contact" class="btn btn-primary btn-full">Choisir Pro</a>
+            <a href="devis.html" class="btn btn-primary btn-full">Choisir Pro</a>
           </div>
         </div>
 
@@ -163,7 +209,7 @@
             </ul>
           </div>
           <div class="pcp-footer">
-            <a href="index.html#contact" class="btn btn-outline btn-full">Choisir Prestige</a>
+            <a href="devis.html" class="btn btn-outline btn-full">Choisir Prestige</a>
           </div>
         </div>
 
@@ -294,7 +340,7 @@
         <h2>Pas sûr de votre choix ?</h2>
         <p>On vous conseille gratuitement lors d'un appel de 30 min. Sans engagement, sans jargon.</p>
         <div class="page-cta-actions">
-          <a href="index.html#contact" class="btn btn-primary btn-lg">Prendre rendez-vous gratuitement</a>
+          <a href="devis.html" class="btn btn-primary btn-lg">Prendre rendez-vous gratuitement</a>
           <a href="realisations.html" class="btn btn-ghost btn-lg">Voir nos réalisations →</a>
         </div>
       </div>
@@ -315,9 +361,10 @@
       <div class="footer-links">
         <h5>Expertise</h5>
         <ul>
-          <li><a href="expertise.html#sites-web">Création de site web</a></li>
-          <li><a href="expertise.html#identite">Identité visuelle</a></li>
-          <li><a href="expertise.html#linkedin">Posts LinkedIn</a></li>
+          <li><a href="site-web.html">Création de site web</a></li>
+          <li><a href="identite-visuelle.html">Identité visuelle</a></li>
+          <li><a href="posts-linkedin.html">Posts LinkedIn</a></li>
+          <li><a href="creation-print.html">Création print</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -326,7 +373,7 @@
           <li><a href="realisations.html">Nos réalisations</a></li>
           <li><a href="tarifs.html">Tarifs</a></li>
           <li><a href="index.html#temoignages">Témoignages</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="devis.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-links">

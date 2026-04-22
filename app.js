@@ -2,13 +2,29 @@
 
 /* ── MENU MOBILE ── */
 function toggleMenu() {
-  document.getElementById('navMobile').classList.toggle('open');
+  const navMobile = document.getElementById('navMobile');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const isOpen = navMobile.classList.toggle('open');
+  if (menuToggle) menuToggle.classList.toggle('active');
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+  if (!isOpen) {
+    document.querySelectorAll('.nav-mobile-group.open').forEach(g => g.classList.remove('open'));
+  }
+}
+
+function toggleExpertise(btn) {
+  btn.closest('.nav-mobile-group').classList.toggle('open');
 }
 
 document.addEventListener('click', function(e) {
   const nav = document.querySelector('.nav-wrapper');
-  if (nav && !nav.contains(e.target)) {
-    document.getElementById('navMobile').classList.remove('open');
+  const navMobile = document.getElementById('navMobile');
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (nav && !nav.contains(e.target) && !navMobile.contains(e.target) && navMobile.classList.contains('open')) {
+    navMobile.classList.remove('open');
+    if (menuToggle) menuToggle.classList.remove('active');
+    document.body.style.overflow = '';
+    document.querySelectorAll('.nav-mobile-group.open').forEach(g => g.classList.remove('open'));
   }
 });
 
@@ -93,8 +109,10 @@ if (expertiseSections.length) {
       if (entry.isIntersecting) {
         const id = entry.target.id;
         navLinks.forEach(a => {
-          a.style.color = a.href.includes(id) ? 'var(--purple-vivid)' : '';
-          a.style.borderBottomColor = a.href.includes(id) ? 'var(--purple)' : 'transparent';
+          const isActive = a.href.includes(id);
+          a.style.color = isActive ? 'var(--purple-vivid)' : '';
+          a.style.borderColor = isActive ? 'var(--purple)' : '';
+          a.style.backgroundColor = isActive ? 'var(--purple-soft)' : '';
         });
       }
     });

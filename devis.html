@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expertise — NextLink Studio</title>
-  <meta name="description" content="Découvrez toutes les expertises de NextLink Studio : création de site web, identité visuelle et posts LinkedIn pour artisans et indépendants." />
+  <title>Devis gratuit — NextLink Studio</title>
+  <meta name="description" content="Obtenez votre devis personnalisé et gratuit en quelques minutes. NextLink Studio vous recontacte sous 24h pour discuter de votre projet." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet" />
@@ -20,7 +20,7 @@
       </a>
       <ul class="nav-links">
         <li class="nav-dropdown">
-          <a href="expertise.html" class="nav-has-dropdown active">Expertise <span class="nav-arrow">▾</span></a>
+          <a href="expertise.html" class="nav-has-dropdown">Expertise <span class="nav-arrow">▾</span></a>
           <div class="dropdown-menu">
             <div class="dropdown-menu-inner">
               <div class="dm-header">Nos expertises</div>
@@ -52,7 +52,7 @@
         <li><a href="tarifs.html">Tarifs</a></li>
         <li><a href="index.html#temoignages">Témoignages</a></li>
       </ul>
-      <a href="devis.html" class="btn btn-primary nav-cta">Devis gratuit</a>
+      <a href="devis.html" class="btn btn-primary nav-cta active">Devis gratuit</a>
       <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
@@ -88,43 +88,93 @@
   <section class="page-hero">
     <div class="page-hero-bg"></div>
     <div class="container page-hero-content">
-      <div class="page-breadcrumb"><a href="index.html">Accueil</a> / <span>Expertise</span></div>
-      <h1>Notre <span class="gradient-text">expertise</span></h1>
-      <p>Quatre piliers pour votre visibilité en ligne — pensés pour les artisans qui n'ont pas de temps à perdre.</p>
+      <div class="page-breadcrumb"><a href="index.html">Accueil</a> / <span>Devis gratuit</span></div>
+      <h1>Votre devis <span class="gradient-text">gratuit & sans engagement</span></h1>
+      <p>Remplissez le formulaire ci-dessous — on vous recontacte sous 24h pour discuter de votre projet, sans jargon et sans pression.</p>
     </div>
   </section>
 
-  <!-- SERVICES CARDS -->
-  <section style="padding: 80px 0;">
+  <!-- FORMULAIRE DEVIS -->
+  <section class="contact" id="contact" style="padding-top: 64px;">
     <div class="container">
-      <div class="preview-cards">
-        <a href="site-web.html" class="preview-card pc-web">
-          <div class="preview-card-icon-wrap"><span>🌐</span></div>
-          <h3>Création de site web</h3>
-          <p>Design sur mesure, mobile-first, SEO local. Livré en 7 jours avec devis en ligne et réservation de créneaux intégrés.</p>
-          <span class="preview-card-link">Découvrir <span class="pca">→</span></span>
-        </a>
-        <a href="identite-visuelle.html" class="preview-card pc-design">
-          <div class="preview-card-icon-wrap"><span>🎨</span></div>
-          <h3>Identité visuelle</h3>
-          <p>Logo professionnel, charte graphique et supports de communication qui inspirent confiance dès le premier regard.</p>
-          <span class="preview-card-link">Découvrir <span class="pca">→</span></span>
-        </a>
-        <a href="posts-linkedin.html" class="preview-card pc-linkedin">
-          <div class="preview-card-icon-wrap"><span>💼</span></div>
-          <h3>Posts LinkedIn</h3>
-          <p>On rédige et publie des contenus qui valorisent vos chantiers et attirent clients professionnels et partenaires.</p>
-          <span class="preview-card-link">Découvrir <span class="pca">→</span></span>
-        </a>
-        <a href="creation-print.html" class="preview-card pc-print">
-          <div class="preview-card-icon-wrap"><span>🖨️</span></div>
-          <h3>Création print</h3>
-          <p>Flyers, kakémonos et cartes de visite à vos couleurs. Des supports imprimés percutants pour vous démarquer partout où vous passez.</p>
-          <span class="preview-card-link">Découvrir <span class="pca">→</span></span>
-        </a>
-      </div>
-      <div class="text-center" style="margin-top: 56px;">
-        <a href="devis.html" class="btn btn-primary btn-lg">Demander un devis gratuit</a>
+      <div class="contact-grid">
+        <div class="contact-text">
+          <div class="section-badge">Devis personnalisé</div>
+          <h2>Parlons de<br /><span class="gradient-text">votre projet</span></h2>
+          <p>Remplissez ce formulaire et on vous recontacte sous 24h — sans engagement, sans jargon, juste une vraie conversation sur ce qu'on peut faire pour vous.</p>
+          <div class="contact-reassurance">
+            <div class="reassurance-item"><span class="ri-icon">⚡</span><span>Réponse sous 24h garantie</span></div>
+            <div class="reassurance-item"><span class="ri-icon">🎯</span><span>Devis personnalisé et gratuit</span></div>
+            <div class="reassurance-item"><span class="ri-icon">🤝</span><span>Sans engagement</span></div>
+            <div class="reassurance-item"><span class="ri-icon">🔒</span><span>Vos données restent confidentielles</span></div>
+          </div>
+          <div style="margin-top: 40px; padding: 24px; background: var(--bg-card); border: 1.5px solid var(--border); border-radius: 16px;">
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 12px; font-weight: 600;">Vous préférez nous contacter directement ?</p>
+            <a href="mailto:hello@nextlinkstudio.fr" style="display:block; color: var(--text); font-size: 15px; margin-bottom: 6px;">✉️ hello@nextlinkstudio.fr</a>
+            <a href="tel:+33600000000" style="display:block; color: var(--text); font-size: 15px;">📞 06 00 00 00 00</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">Prénom *</label>
+              <input type="text" id="prenom" name="prenom" placeholder="Jean" required />
+            </div>
+            <div class="form-group">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="nom" placeholder="Dupont" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="metier">Votre métier *</label>
+            <select id="metier" name="metier" required>
+              <option value="">Sélectionnez votre métier</option>
+              <option>Plombier</option>
+              <option>Électricien</option>
+              <option>Menuisier</option>
+              <option>Peintre en bâtiment</option>
+              <option>Carreleur</option>
+              <option>Maçon</option>
+              <option>Couvreur</option>
+              <option>Serrurier</option>
+              <option>Chauffagiste</option>
+              <option>Autre artisan / indépendant</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required />
+            </div>
+            <div class="form-group">
+              <label for="tel">Téléphone</label>
+              <input type="tel" id="tel" name="tel" placeholder="06 12 34 56 78" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="offre">Offre qui vous intéresse</label>
+            <select id="offre" name="offre">
+              <option value="">Je ne sais pas encore</option>
+              <option>Essentiel — 790€</option>
+              <option>Pro — 1 290€</option>
+              <option>Prestige — 1 890€</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Dites-nous en plus (optionnel)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Votre zone d'intervention, vos besoins spécifiques..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-full">
+            <span class="btn-text">Envoyer ma demande →</span>
+            <span class="btn-loading" style="display:none">Envoi en cours...</span>
+          </button>
+          <p class="form-legal">En soumettant ce formulaire, vous acceptez d'être recontacté par NextLink Studio. Aucune donnée n'est revendue.</p>
+        </form>
+        <div class="form-success" id="formSuccess" style="display:none">
+          <div class="success-icon">✅</div>
+          <h3>Demande envoyée !</h3>
+          <p>Merci, on vous recontacte sous 24h pour discuter de votre projet.</p>
+        </div>
       </div>
     </div>
   </section>

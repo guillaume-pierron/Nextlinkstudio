@@ -19,23 +19,69 @@
         <img src="logo.svg" alt="NextLink Studio">
       </a>
       <ul class="nav-links">
-        <li><a href="expertise.html">Expertise</a></li>
+        <li class="nav-dropdown">
+          <a href="expertise.html" class="nav-has-dropdown">Expertise <span class="nav-arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-inner">
+              <div class="dm-header">Nos expertises</div>
+              <a href="site-web.html" class="dropdown-item di-web">
+                <div class="di-icon-wrap"><span>🌐</span></div>
+                <div class="di-text"><strong>Création de site web</strong><small>Design sur mesure, livré en 7 jours</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <a href="identite-visuelle.html" class="dropdown-item di-design">
+                <div class="di-icon-wrap"><span>🎨</span></div>
+                <div class="di-text"><strong>Identité visuelle</strong><small>Logo, charte graphique, supports</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <a href="posts-linkedin.html" class="dropdown-item di-linkedin">
+                <div class="di-icon-wrap"><span>💼</span></div>
+                <div class="di-text"><strong>Posts LinkedIn</strong><small>Contenus et visuels pour vos réseaux</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <a href="creation-print.html" class="dropdown-item di-print">
+                <div class="di-icon-wrap"><span>🖨️</span></div>
+                <div class="di-text"><strong>Création print</strong><small>Flyers, kakémonos, cartes de visite</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <div class="dm-footer"><a href="expertise.html">Voir toutes nos expertises →</a></div>
+            </div>
+          </div>
+        </li>
         <li><a href="realisations.html">Nos réalisations</a></li>
         <li><a href="tarifs.html">Tarifs</a></li>
         <li><a href="index.html#temoignages">Témoignages</a></li>
       </ul>
-      <a href="index.html#contact" class="btn btn-primary nav-cta">Devis gratuit</a>
+      <a href="devis.html" class="btn btn-primary nav-cta">Devis gratuit</a>
       <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </button>
     </nav>
   </header>
   <div class="nav-mobile" id="navMobile">
-    <a href="expertise.html" onclick="toggleMenu()">Expertise</a>
-    <a href="realisations.html" onclick="toggleMenu()">Nos réalisations</a>
-    <a href="tarifs.html" onclick="toggleMenu()">Tarifs</a>
-    <a href="index.html#temoignages" onclick="toggleMenu()">Témoignages</a>
-    <a href="index.html#contact" class="btn btn-primary btn-lg" onclick="toggleMenu()">Devis gratuit</a>
+    <div class="nav-mobile-inner">
+      <div class="nav-mobile-nav">
+        <div class="nav-mobile-group">
+          <button class="nav-mobile-toggle" onclick="toggleExpertise(this)">
+            <span class="nav-mobile-toggle-left"><span class="nm-num">01</span>Expertise</span>
+            <span class="nav-mobile-arrow">▾</span>
+          </button>
+          <div class="nav-mobile-submenu"><div class="nav-mobile-submenu-inner">
+            <a href="site-web.html" onclick="toggleMenu()"><span class="nm-service-icon">🌐</span>Création de site web</a>
+            <a href="identite-visuelle.html" onclick="toggleMenu()"><span class="nm-service-icon">🎨</span>Identité visuelle</a>
+            <a href="posts-linkedin.html" onclick="toggleMenu()"><span class="nm-service-icon">💼</span>Posts LinkedIn</a>
+            <a href="creation-print.html" onclick="toggleMenu()"><span class="nm-service-icon">🖨️</span>Création print</a>
+          </div></div>
+        </div>
+        <a href="realisations.html" onclick="toggleMenu()"><span class="nm-num">02</span>Nos réalisations</a>
+        <a href="tarifs.html" onclick="toggleMenu()"><span class="nm-num">03</span>Tarifs</a>
+        <a href="index.html#temoignages" onclick="toggleMenu()"><span class="nm-num">04</span>Témoignages</a>
+      </div>
+      <div class="nav-mobile-cta">
+        <a href="devis.html" class="btn btn-primary" onclick="toggleMenu()">Devis gratuit →</a>
+        <p class="nav-mobile-tagline">Votre projet mérite le meilleur.</p>
+      </div>
+    </div>
   </div>
 
   <!-- HERO -->
@@ -44,14 +90,14 @@
     <div class="container hero-content">
       <div class="hero-badge">🔧 Spécialiste artisans & indépendants</div>
       <h1 class="hero-title">
-        Votre site web pro,<br />
-        <span class="gradient-text">pendant que vous travaillez.</span>
+        Un site web professionnel<br />
+        <span class="gradient-text">qui travaille pour vous 24h/24.</span>
       </h1>
       <p class="hero-subtitle">
-        On crée votre site vitrine avec devis en ligne et réservation de créneaux — livré en 7 jours. Vous vous concentrez sur votre métier, on s'occupe du reste.
+        On crée votre site vitrine avec devis en ligne et réservation de créneaux
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary btn-lg">Obtenir mon devis gratuit</a>
+        <a href="devis.html" class="btn btn-primary btn-lg">Obtenir mon devis gratuit</a>
         <a href="realisations.html" class="btn btn-ghost btn-lg">Voir nos réalisations →</a>
       </div>
       <div class="hero-marquee">
@@ -60,15 +106,15 @@
             <span class="marquee-tag">🌐 Création de site web</span>
             <span class="marquee-tag">🎨 Identité visuelle</span>
             <span class="marquee-tag">💼 Création de posts LinkedIn</span>
+            <span class="marquee-tag">🖨️ Création print</span>
             <span class="marquee-tag">🌐 Création de site web</span>
             <span class="marquee-tag">🎨 Identité visuelle</span>
             <span class="marquee-tag">💼 Création de posts LinkedIn</span>
+            <span class="marquee-tag">🖨️ Création print</span>
             <span class="marquee-tag">🌐 Création de site web</span>
             <span class="marquee-tag">🎨 Identité visuelle</span>
             <span class="marquee-tag">💼 Création de posts LinkedIn</span>
-            <span class="marquee-tag">🌐 Création de site web</span>
-            <span class="marquee-tag">🎨 Identité visuelle</span>
-            <span class="marquee-tag">💼 Création de posts LinkedIn</span>
+            <span class="marquee-tag">🖨️ Création print</span>
           </div>
         </div>
       </div>
@@ -86,24 +132,28 @@
       </div>
       <div class="pain-cards">
         <div class="pain-card bad">
-          <div class="pain-card-icon">😤</div>
-          <p><strong>Sans site web</strong></p>
-          <ul>
-            <li>Invisible sur Google</li>
-            <li>Bouche-à-oreille seulement</li>
-            <li>Devis par téléphone, chronophage</li>
-            <li>Pas de crédibilité en ligne</li>
-          </ul>
+          <div class="pain-card-header">
+            <div class="pain-card-icon">😤</div>
+            <span class="pain-card-label">Sans site web</span>
+          </div>
+          <div class="pain-card-items">
+            <div class="pain-item"><span class="pi-icon bad">✕</span><span>Invisible sur Google</span></div>
+            <div class="pain-item"><span class="pi-icon bad">✕</span><span>Bouche-à-oreille seulement</span></div>
+            <div class="pain-item"><span class="pi-icon bad">✕</span><span>Devis par téléphone, chronophage</span></div>
+            <div class="pain-item"><span class="pi-icon bad">✕</span><span>Pas de crédibilité en ligne</span></div>
+          </div>
         </div>
         <div class="pain-card good">
-          <div class="pain-card-icon">🚀</div>
-          <p><strong>Avec NextLink Studio</strong></p>
-          <ul>
-            <li>Visible sur Google dès le lancement</li>
-            <li>Devis reçus 24h/24, 7j/7</li>
-            <li>Réservations automatiques</li>
-            <li>Image professionnelle instantanée</li>
-          </ul>
+          <div class="pain-card-header">
+            <div class="pain-card-icon">🚀</div>
+            <span class="pain-card-label">Avec NextLink Studio</span>
+          </div>
+          <div class="pain-card-items">
+            <div class="pain-item"><span class="pi-icon good">✓</span><span>Visible sur Google dès le lancement</span></div>
+            <div class="pain-item"><span class="pi-icon good">✓</span><span>Devis reçus 24h/24, 7j/7</span></div>
+            <div class="pain-item"><span class="pi-icon good">✓</span><span>Réservations automatiques</span></div>
+            <div class="pain-item"><span class="pi-icon good">✓</span><span>Image professionnelle instantanée</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -117,23 +167,29 @@
         <h2>Tout ce qu'il faut pour<br /><span class="gradient-text">dominer votre secteur local</span></h2>
       </div>
       <div class="preview-cards">
-        <a href="expertise.html#sites-web" class="preview-card">
-          <div class="preview-card-icon">🌐</div>
+        <a href="site-web.html" class="preview-card pc-web">
+          <div class="preview-card-icon-wrap"><span>🌐</span></div>
           <h3>Création de site web</h3>
           <p>Design sur mesure, mobile-first, SEO local. Livré en 7 jours avec devis en ligne et réservation de créneaux intégrés.</p>
-          <span class="preview-card-link">En savoir plus →</span>
+          <span class="preview-card-link">En savoir plus <span class="pca">→</span></span>
         </a>
-        <a href="expertise.html#identite" class="preview-card">
-          <div class="preview-card-icon">🎨</div>
+        <a href="identite-visuelle.html" class="preview-card pc-design">
+          <div class="preview-card-icon-wrap"><span>🎨</span></div>
           <h3>Identité visuelle</h3>
           <p>Logo professionnel, charte graphique et supports de communication qui inspirent confiance dès le premier regard.</p>
-          <span class="preview-card-link">En savoir plus →</span>
+          <span class="preview-card-link">En savoir plus <span class="pca">→</span></span>
         </a>
-        <a href="expertise.html#linkedin" class="preview-card">
-          <div class="preview-card-icon">💼</div>
+        <a href="posts-linkedin.html" class="preview-card pc-linkedin">
+          <div class="preview-card-icon-wrap"><span>💼</span></div>
           <h3>Posts LinkedIn</h3>
           <p>On rédige et publie des contenus qui valorisent vos chantiers et attirent clients professionnels et partenaires.</p>
-          <span class="preview-card-link">En savoir plus →</span>
+          <span class="preview-card-link">En savoir plus <span class="pca">→</span></span>
+        </a>
+        <a href="creation-print.html" class="preview-card pc-print">
+          <div class="preview-card-icon-wrap"><span>🖨️</span></div>
+          <h3>Création print</h3>
+          <p>Flyers, kakémonos et cartes de visite à vos couleurs. Des supports imprimés percutants pour vous démarquer partout où vous passez.</p>
+          <span class="preview-card-link">En savoir plus <span class="pca">→</span></span>
         </a>
       </div>
     </div>
@@ -148,31 +204,34 @@
       </div>
       <div class="steps">
         <div class="step">
-          <div class="step-number">01</div>
+          <div class="step-icon-badge">📞</div>
           <div class="step-content">
             <h3>Échange de 30 min</h3>
             <p>On discute de votre activité, de vos clients cibles, de votre zone géographique. On cerne exactement ce dont vous avez besoin.</p>
           </div>
+          <div class="step-number">01</div>
         </div>
-        <div class="step-arrow">→</div>
+        <div class="step-arrow"><span class="step-arrow-line"></span><span class="step-arrow-head">›</span></div>
         <div class="step">
-          <div class="step-number">02</div>
+          <div class="step-icon-badge">✏️</div>
           <div class="step-content">
             <h3>On crée, vous validez</h3>
             <p>On conçoit votre site et vous montrez l'avancement. Vous donnez votre avis, on ajuste jusqu'à ce que ce soit parfait.</p>
           </div>
+          <div class="step-number">02</div>
         </div>
-        <div class="step-arrow">→</div>
+        <div class="step-arrow"><span class="step-arrow-line"></span><span class="step-arrow-head">›</span></div>
         <div class="step">
-          <div class="step-number">03</div>
+          <div class="step-icon-badge">🚀</div>
           <div class="step-content">
             <h3>Mise en ligne & suivi</h3>
             <p>Votre site est en ligne en 7 jours. On vous forme, on s'assure que tout fonctionne, et on reste disponibles pour la suite.</p>
           </div>
+          <div class="step-number">03</div>
         </div>
       </div>
       <div class="how-cta">
-        <a href="#contact" class="btn btn-primary btn-lg">Commencer maintenant — c'est gratuit</a>
+        <a href="devis.html" class="btn btn-primary btn-lg">Commencer maintenant — c'est gratuit</a>
       </div>
     </div>
   </section>
@@ -252,115 +311,44 @@
       </div>
       <div class="testimonials-grid">
         <div class="testimonial">
+          <div class="testimonial-quote">❝</div>
           <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"En 3 semaines, j'avais déjà reçu 15 demandes de devis via mon site. Avant, j'étais invisible sur internet. Franchement, je regrette de ne pas l'avoir fait plus tôt."</p>
+          <p class="testimonial-text">En 3 semaines, j'avais déjà reçu 15 demandes de devis via mon site. Avant, j'étais invisible sur internet. Franchement, je regrette de ne pas l'avoir fait plus tôt.</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">CM</div>
             <div><strong>Christophe M.</strong><span>Plombier — Lyon</span></div>
+            <div class="testimonial-verified">✓ Vérifié</div>
           </div>
         </div>
         <div class="testimonial">
+          <div class="testimonial-quote">❝</div>
           <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Le système de réservation en ligne m'a changé la vie. Plus de coup de fil à n'en plus finir pour caler un RDV. Les clients bookent, moi je travaille."</p>
+          <p class="testimonial-text">Le système de réservation en ligne m'a changé la vie. Plus de coup de fil à n'en plus finir pour caler un RDV. Les clients bookent, moi je travaille.</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">SR</div>
             <div><strong>Sophie R.</strong><span>Électricienne — Bordeaux</span></div>
+            <div class="testimonial-verified">✓ Vérifié</div>
           </div>
         </div>
         <div class="testimonial">
+          <div class="testimonial-quote">❝</div>
           <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"L'équipe parle vraiment notre langue. Pas de blabla technique, ils ont compris mon métier et livré exactement ce que je voulais en une semaine."</p>
+          <p class="testimonial-text">L'équipe parle vraiment notre langue. Pas de blabla technique, ils ont compris mon métier et livré exactement ce que je voulais en une semaine.</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">TB</div>
             <div><strong>Thomas B.</strong><span>Menuisier — Nantes</span></div>
+            <div class="testimonial-verified">✓ Vérifié</div>
           </div>
         </div>
         <div class="testimonial">
+          <div class="testimonial-quote">❝</div>
           <div class="testimonial-stars">★★★★★</div>
-          <p class="testimonial-text">"Mon logo est top, mes posts LinkedIn tournent bien, et le site remonte chaque mois dans les résultats Google. Tout ce qu'il me fallait dans un seul endroit."</p>
+          <p class="testimonial-text">Mon logo est top, mes posts LinkedIn tournent bien, et le site remonte chaque mois dans les résultats Google. Tout ce qu'il me fallait dans un seul endroit.</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">KD</div>
             <div><strong>Karim D.</strong><span>Peintre en bâtiment — Paris</span></div>
+            <div class="testimonial-verified">✓ Vérifié</div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-text">
-          <div class="section-badge">Contact</div>
-          <h2>Parlons de<br /><span class="gradient-text">votre projet</span></h2>
-          <p>Remplissez ce formulaire et on vous recontacte sous 24h — sans engagement, sans jargon, juste une vraie conversation sur ce qu'on peut faire pour vous.</p>
-          <div class="contact-reassurance">
-            <div class="reassurance-item"><span class="ri-icon">⚡</span><span>Réponse sous 24h garantie</span></div>
-            <div class="reassurance-item"><span class="ri-icon">🎯</span><span>Devis personnalisé et gratuit</span></div>
-            <div class="reassurance-item"><span class="ri-icon">🤝</span><span>Sans engagement</span></div>
-          </div>
-        </div>
-        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="prenom">Prénom *</label>
-              <input type="text" id="prenom" name="prenom" placeholder="Jean" required />
-            </div>
-            <div class="form-group">
-              <label for="nom">Nom *</label>
-              <input type="text" id="nom" name="nom" placeholder="Dupont" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="metier">Votre métier *</label>
-            <select id="metier" name="metier" required>
-              <option value="">Sélectionnez votre métier</option>
-              <option>Plombier</option>
-              <option>Électricien</option>
-              <option>Menuisier</option>
-              <option>Peintre en bâtiment</option>
-              <option>Carreleur</option>
-              <option>Maçon</option>
-              <option>Couvreur</option>
-              <option>Serrurier</option>
-              <option>Chauffagiste</option>
-              <option>Autre artisan / indépendant</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required />
-            </div>
-            <div class="form-group">
-              <label for="tel">Téléphone</label>
-              <input type="tel" id="tel" name="tel" placeholder="06 12 34 56 78" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="offre">Offre qui vous intéresse</label>
-            <select id="offre" name="offre">
-              <option value="">Je ne sais pas encore</option>
-              <option>Essentiel — 790€</option>
-              <option>Pro — 1 290€</option>
-              <option>Prestige — 1 890€</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Dites-nous en plus (optionnel)</label>
-            <textarea id="message" name="message" rows="3" placeholder="Votre zone d'intervention, vos besoins spécifiques..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-full">
-            <span class="btn-text">Envoyer ma demande →</span>
-            <span class="btn-loading" style="display:none">Envoi en cours...</span>
-          </button>
-          <p class="form-legal">En soumettant ce formulaire, vous acceptez d'être recontacté par NextLink Studio. Aucune donnée n'est revendue.</p>
-        </form>
-        <div class="form-success" id="formSuccess" style="display:none">
-          <div class="success-icon">✅</div>
-          <h3>Demande envoyée !</h3>
-          <p>Merci, on vous recontacte sous 24h pour discuter de votre projet.</p>
         </div>
       </div>
     </div>
@@ -380,9 +368,10 @@
       <div class="footer-links">
         <h5>Expertise</h5>
         <ul>
-          <li><a href="expertise.html#sites-web">Création de site web</a></li>
-          <li><a href="expertise.html#identite">Identité visuelle</a></li>
-          <li><a href="expertise.html#linkedin">Posts LinkedIn</a></li>
+          <li><a href="site-web.html">Création de site web</a></li>
+          <li><a href="identite-visuelle.html">Identité visuelle</a></li>
+          <li><a href="posts-linkedin.html">Posts LinkedIn</a></li>
+          <li><a href="creation-print.html">Création print</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -391,7 +380,7 @@
           <li><a href="realisations.html">Nos réalisations</a></li>
           <li><a href="tarifs.html">Tarifs</a></li>
           <li><a href="index.html#temoignages">Témoignages</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="devis.html">Devis gratuit</a></li>
         </ul>
       </div>
       <div class="footer-links">
