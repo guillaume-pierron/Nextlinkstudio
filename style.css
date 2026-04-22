@@ -386,15 +386,53 @@ body {
 .pain-cards { display: flex; flex-direction: column; gap: 16px; }
 .pain-card {
   border-radius: var(--radius-lg);
-  padding: 28px;
   border: 1.5px solid var(--border);
-  background: var(--bg-card);
+  overflow: hidden;
+  position: relative;
 }
-.pain-card.bad  { background: rgba(220,38,38,0.06); border-color: rgba(220,38,38,0.25); }
-.pain-card.good { background: rgba(74,222,128,0.05); border-color: rgba(74,222,128,0.22); box-shadow: 0 4px 20px rgba(74,222,128,0.06); }
-.pain-card-icon { font-size: 28px; margin-bottom: 8px; }
-.pain-card p { font-weight: 700; font-size: 15px; color: var(--text); margin-bottom: 10px; }
-.pain-card ul { padding-left: 18px; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
+.pain-card.bad {
+  background: linear-gradient(160deg, #1e0808 0%, #110404 100%);
+  border-color: rgba(239,68,68,0.35);
+  box-shadow: 0 0 0 1px rgba(239,68,68,0.08), 0 24px 64px rgba(239,68,68,0.1);
+}
+.pain-card.good {
+  background: linear-gradient(160deg, #0d0b20 0%, #080c18 100%);
+  border-color: rgba(124,58,237,0.45);
+  box-shadow: 0 0 0 1px rgba(124,58,237,0.1), 0 24px 64px rgba(124,58,237,0.15);
+}
+.pain-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 26px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.pain-card.bad  .pain-card-header { background: linear-gradient(135deg, rgba(239,68,68,0.18), rgba(239,68,68,0.04)); }
+.pain-card.good .pain-card-header { background: linear-gradient(135deg, rgba(124,58,237,0.22), rgba(124,58,237,0.04)); }
+.pain-card-icon { font-size: 30px; line-height: 1; }
+.pain-card-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.pain-card-items { padding: 20px 26px 24px; display: flex; flex-direction: column; gap: 13px; }
+.pain-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+.pi-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  margin-top: 1px;
+}
+.pi-icon.bad  { background: rgba(239,68,68,0.15); color: rgb(239,68,68); border: 1px solid rgba(239,68,68,0.3); }
+.pi-icon.good { background: rgba(74,222,128,0.12); color: rgb(74,222,128); border: 1px solid rgba(74,222,128,0.3); }
 
 /* ── SERVICES ── */
 .services { padding: 96px 0; background: var(--bg-alt); position: relative; overflow: hidden; }
