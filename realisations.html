@@ -90,226 +90,28 @@
     <div class="container page-hero-content">
       <div class="page-breadcrumb"><a href="index.html">Accueil</a> / <span>Nos réalisations</span></div>
       <h1>Nos <span class="gradient-text">réalisations</span></h1>
-      <p>+120 artisans et indépendants équipés partout en France. Voici quelques-unes de nos créations.</p>
-    </div>
-  </section>
-
-  <!-- FILTRES -->
-  <section class="filtres-section">
-    <div class="container">
-      <div class="filtres">
-        <button class="filtre active" onclick="filtrer(this, 'tous')">Tous</button>
-        <button class="filtre" onclick="filtrer(this, 'plomberie')">Plomberie</button>
-        <button class="filtre" onclick="filtrer(this, 'electricite')">Électricité</button>
-        <button class="filtre" onclick="filtrer(this, 'menuiserie')">Menuiserie</button>
-        <button class="filtre" onclick="filtrer(this, 'peinture')">Peinture</button>
-        <button class="filtre" onclick="filtrer(this, 'autres')">Autres</button>
-      </div>
+      <p>Les projets qu'on a construits, de A à Z. Chaque site, chaque identité, chaque résultat.</p>
     </div>
   </section>
 
   <!-- GRILLE RÉALISATIONS -->
   <section class="realisations-full">
     <div class="container">
-      <div class="portfolio-grid-full" id="portfolioGrid">
+      <div class="portfolio-grid--single" style="max-width:860px">
 
-        <!-- Plomberie -->
-        <div class="portfolio-card-full" data-cat="plomberie">
-          <div class="portfolio-preview-full">
-            <div class="preview-nav"><div class="preview-dot"></div><div class="preview-dot"></div><div class="preview-dot"></div></div>
-            <div class="preview-hero blue">
-              <div class="preview-logo">🔧 Martin Plomberie</div>
-              <div class="preview-lines"><div class="preview-line w80"></div><div class="preview-line w60"></div></div>
-              <div class="preview-cta-mock"></div>
-            </div>
-            <div class="preview-services-row"><div class="preview-service-block"></div><div class="preview-service-block"></div><div class="preview-service-block"></div></div>
+        <a href="etude-de-cas-elec-prime.html" class="portfolio-card--featured">
+          <div class="portfolio-featured-img">
+            <img src="images/elec-prime-hero.png" alt="Élec Prime — site web électricien Île-de-France">
           </div>
-          <div class="portfolio-info-full">
-            <div class="portfolio-header">
-              <div>
-                <span class="portfolio-tag">Plomberie</span>
-                <h4>Martin Plomberie</h4>
-                <p class="portfolio-location">📍 Lyon (69)</p>
-              </div>
+          <div class="portfolio-featured-info">
+            <div class="portfolio-featured-left">
+              <span class="portfolio-tag portfolio-tag--gold">Électricité</span>
+              <h4>Élec Prime</h4>
+              <p>Site web + identité visuelle + réservation en ligne · Île-de-France</p>
             </div>
-            <p class="portfolio-desc">Site vitrine complet avec formulaire de devis multi-étapes et réservation de créneaux. SEO ciblé sur les arrondissements de Lyon.</p>
-            <div class="portfolio-services-used">
-              <span>🌐 Site web</span>
-              <span>📋 Devis en ligne</span>
-              <span>📅 Réservation</span>
-            </div>
-            <div class="portfolio-result-full">
-              <div class="pr-stat"><strong>+34</strong><small>demandes/mois</small></div>
-              <div class="pr-stat"><strong>60j</strong><small>pour y arriver</small></div>
-              <div class="pr-stat"><strong>#1</strong><small>Google local</small></div>
-            </div>
+            <div class="portfolio-result portfolio-result--link">Voir l'étude de cas →</div>
           </div>
-        </div>
-
-        <!-- Électricité -->
-        <div class="portfolio-card-full" data-cat="electricite">
-          <div class="portfolio-preview-full">
-            <div class="preview-nav"><div class="preview-dot"></div><div class="preview-dot"></div><div class="preview-dot"></div></div>
-            <div class="preview-hero orange">
-              <div class="preview-logo">⚡ Élec Pro 69</div>
-              <div class="preview-lines"><div class="preview-line w80"></div><div class="preview-line w60"></div></div>
-              <div class="preview-cta-mock"></div>
-            </div>
-            <div class="preview-services-row"><div class="preview-service-block"></div><div class="preview-service-block"></div><div class="preview-service-block"></div></div>
-          </div>
-          <div class="portfolio-info-full">
-            <div class="portfolio-header">
-              <div>
-                <span class="portfolio-tag">Électricité</span>
-                <h4>Élec Pro 69</h4>
-                <p class="portfolio-location">📍 Bordeaux (33)</p>
-              </div>
-            </div>
-            <p class="portfolio-desc">Refonte complète de l'image de marque : logo, site web, charte graphique et stratégie LinkedIn. Positionnement premium pour les marchés professionnels.</p>
-            <div class="portfolio-services-used">
-              <span>🌐 Site web</span>
-              <span>🎨 Logo</span>
-              <span>💼 LinkedIn</span>
-            </div>
-            <div class="portfolio-result-full">
-              <div class="pr-stat"><strong>Page 1</strong><small>Google en 45j</small></div>
-              <div class="pr-stat"><strong>+18</strong><small>clients pro/an</small></div>
-              <div class="pr-stat"><strong>×2,4</strong><small>CA en 6 mois</small></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Menuiserie -->
-        <div class="portfolio-card-full" data-cat="menuiserie">
-          <div class="portfolio-preview-full">
-            <div class="preview-nav"><div class="preview-dot"></div><div class="preview-dot"></div><div class="preview-dot"></div></div>
-            <div class="preview-hero green">
-              <div class="preview-logo">🪵 Atelier Dubois</div>
-              <div class="preview-lines"><div class="preview-line w80"></div><div class="preview-line w60"></div></div>
-              <div class="preview-cta-mock"></div>
-            </div>
-            <div class="preview-services-row"><div class="preview-service-block"></div><div class="preview-service-block"></div><div class="preview-service-block"></div></div>
-          </div>
-          <div class="portfolio-info-full">
-            <div class="portfolio-header">
-              <div>
-                <span class="portfolio-tag">Menuiserie</span>
-                <h4>Atelier Dubois</h4>
-                <p class="portfolio-location">📍 Nantes (44)</p>
-              </div>
-            </div>
-            <p class="portfolio-desc">Site artisanal avec galerie de réalisations, agenda de consultation et section témoignages. Accent sur le savoir-faire et la qualité premium.</p>
-            <div class="portfolio-services-used">
-              <span>🌐 Site web</span>
-              <span>📅 Réservation</span>
-              <span>🎨 Charte graphique</span>
-            </div>
-            <div class="portfolio-result-full">
-              <div class="pr-stat"><strong>×3</strong><small>contacts en 30j</small></div>
-              <div class="pr-stat"><strong>+12</strong><small>RDV/mois</small></div>
-              <div class="pr-stat"><strong>4,9★</strong><small>Google Reviews</small></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Peinture -->
-        <div class="portfolio-card-full" data-cat="peinture">
-          <div class="portfolio-preview-full">
-            <div class="preview-nav"><div class="preview-dot"></div><div class="preview-dot"></div><div class="preview-dot"></div></div>
-            <div class="preview-hero purple">
-              <div class="preview-logo">🎨 Karim Déco</div>
-              <div class="preview-lines"><div class="preview-line w80"></div><div class="preview-line w60"></div></div>
-              <div class="preview-cta-mock"></div>
-            </div>
-            <div class="preview-services-row"><div class="preview-service-block"></div><div class="preview-service-block"></div><div class="preview-service-block"></div></div>
-          </div>
-          <div class="portfolio-info-full">
-            <div class="portfolio-header">
-              <div>
-                <span class="portfolio-tag">Peinture</span>
-                <h4>Karim Déco</h4>
-                <p class="portfolio-location">📍 Paris (75)</p>
-              </div>
-            </div>
-            <p class="portfolio-desc">Présence digitale complète : site, logo et 8 posts LinkedIn par mois valorisant ses réalisations haussmanniennes. Attractivité sur les marchés syndics et agences immobilières.</p>
-            <div class="portfolio-services-used">
-              <span>🌐 Site web</span>
-              <span>🎨 Logo</span>
-              <span>💼 LinkedIn ×8/mois</span>
-            </div>
-            <div class="portfolio-result-full">
-              <div class="pr-stat"><strong>2 300</strong><small>vues/post</small></div>
-              <div class="pr-stat"><strong>+5</strong><small>syndics contactés</small></div>
-              <div class="pr-stat"><strong>×1,8</strong><small>CA en 4 mois</small></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Couvreur -->
-        <div class="portfolio-card-full" data-cat="autres">
-          <div class="portfolio-preview-full">
-            <div class="preview-nav"><div class="preview-dot"></div><div class="preview-dot"></div><div class="preview-dot"></div></div>
-            <div class="preview-hero darkblue">
-              <div class="preview-logo">🏠 Couverture Garnier</div>
-              <div class="preview-lines"><div class="preview-line w80"></div><div class="preview-line w60"></div></div>
-              <div class="preview-cta-mock"></div>
-            </div>
-            <div class="preview-services-row"><div class="preview-service-block"></div><div class="preview-service-block"></div><div class="preview-service-block"></div></div>
-          </div>
-          <div class="portfolio-info-full">
-            <div class="portfolio-header">
-              <div>
-                <span class="portfolio-tag">Couverture</span>
-                <h4>Couverture Garnier</h4>
-                <p class="portfolio-location">📍 Toulouse (31)</p>
-              </div>
-            </div>
-            <p class="portfolio-desc">Site avec simulateur de devis rapide pour urgences toiture. Intégration d'une carte de zone d'intervention et galerie photo des chantiers terminés.</p>
-            <div class="portfolio-services-used">
-              <span>🌐 Site web</span>
-              <span>📋 Simulateur devis</span>
-              <span>🎨 Logo</span>
-            </div>
-            <div class="portfolio-result-full">
-              <div class="pr-stat"><strong>+22</strong><small>urgences/mois</small></div>
-              <div class="pr-stat"><strong>Top 3</strong><small>Google local</small></div>
-              <div class="pr-stat"><strong>+40%</strong><small>CA saison</small></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Serrurier -->
-        <div class="portfolio-card-full" data-cat="autres">
-          <div class="portfolio-preview-full">
-            <div class="preview-nav"><div class="preview-dot"></div><div class="preview-dot"></div><div class="preview-dot"></div></div>
-            <div class="preview-hero red">
-              <div class="preview-logo">🔑 SOS Serrure 24h</div>
-              <div class="preview-lines"><div class="preview-line w80"></div><div class="preview-line w60"></div></div>
-              <div class="preview-cta-mock"></div>
-            </div>
-            <div class="preview-services-row"><div class="preview-service-block"></div><div class="preview-service-block"></div><div class="preview-service-block"></div></div>
-          </div>
-          <div class="portfolio-info-full">
-            <div class="portfolio-header">
-              <div>
-                <span class="portfolio-tag">Serrurerie</span>
-                <h4>SOS Serrure 24h</h4>
-                <p class="portfolio-location">📍 Marseille (13)</p>
-              </div>
-            </div>
-            <p class="portfolio-desc">Site d'urgence avec numéro cliquable en évidence, formulaire de rappel immédiat et positionnement SEO sur les requêtes nocturnes et week-end.</p>
-            <div class="portfolio-services-used">
-              <span>🌐 Site web</span>
-              <span>📋 Rappel immédiat</span>
-              <span>SEO urgences</span>
-            </div>
-            <div class="portfolio-result-full">
-              <div class="pr-stat"><strong>+60</strong><small>appels/mois</small></div>
-              <div class="pr-stat"><strong>#1</strong><small>"serrurier urgence 13"</small></div>
-              <div class="pr-stat"><strong>24/7</strong><small>visibilité assurée</small></div>
-            </div>
-          </div>
-        </div>
+        </a>
 
       </div>
     </div>
