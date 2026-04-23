@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Étude de cas — Élec Prime | NextLink Studio</title>
+  <meta name="description" content="Comment NextLink Studio a conçu le site web d'Élec Prime, électricien indépendant en Île-de-France — identité visuelle, site premium et réservation en ligne." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav-wrapper">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="NextLink Studio">
+      </a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="expertise.html" class="nav-has-dropdown">Expertise <span class="nav-arrow">▾</span></a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-inner">
+              <div class="dm-header">Nos expertises</div>
+              <a href="site-web.html" class="dropdown-item di-web">
+                <div class="di-icon-wrap"><span>🌐</span></div>
+                <div class="di-text"><strong>Création de site web</strong><small>Design sur mesure, livré en 7 jours</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <a href="identite-visuelle.html" class="dropdown-item di-design">
+                <div class="di-icon-wrap"><span>🎨</span></div>
+                <div class="di-text"><strong>Identité visuelle</strong><small>Logo, charte graphique, supports</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <a href="posts-linkedin.html" class="dropdown-item di-linkedin">
+                <div class="di-icon-wrap"><span>💼</span></div>
+                <div class="di-text"><strong>Posts LinkedIn</strong><small>Contenus et visuels pour vos réseaux</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <a href="creation-print.html" class="dropdown-item di-print">
+                <div class="di-icon-wrap"><span>🖨️</span></div>
+                <div class="di-text"><strong>Création print</strong><small>Flyers, kakémonos, cartes de visite</small></div>
+                <span class="di-arrow">→</span>
+              </a>
+              <div class="dm-footer"><a href="expertise.html">Voir toutes nos expertises →</a></div>
+            </div>
+          </div>
+        </li>
+        <li><a href="realisations.html" class="active">Nos réalisations</a></li>
+        <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="index.html#temoignages">Témoignages</a></li>
+      </ul>
+      <a href="devis.html" class="btn btn-primary nav-cta">Devis gratuit</a>
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+  <div class="nav-mobile" id="navMobile">
+    <div class="nav-mobile-inner">
+      <div class="nav-mobile-nav">
+        <div class="nav-mobile-group">
+          <button class="nav-mobile-toggle" onclick="toggleExpertise(this)">
+            <span class="nav-mobile-toggle-left"><span class="nm-num">01</span>Expertise</span>
+            <span class="nav-mobile-arrow">▾</span>
+          </button>
+          <div class="nav-mobile-submenu"><div class="nav-mobile-submenu-inner">
+            <a href="site-web.html" onclick="toggleMenu()"><span class="nm-service-icon">🌐</span>Création de site web</a>
+            <a href="identite-visuelle.html" onclick="toggleMenu()"><span class="nm-service-icon">🎨</span>Identité visuelle</a>
+            <a href="posts-linkedin.html" onclick="toggleMenu()"><span class="nm-service-icon">💼</span>Posts LinkedIn</a>
+            <a href="creation-print.html" onclick="toggleMenu()"><span class="nm-service-icon">🖨️</span>Création print</a>
+          </div></div>
+        </div>
+        <a href="realisations.html" onclick="toggleMenu()"><span class="nm-num">02</span>Nos réalisations</a>
+        <a href="tarifs.html" onclick="toggleMenu()"><span class="nm-num">03</span>Tarifs</a>
+        <a href="index.html#temoignages" onclick="toggleMenu()"><span class="nm-num">04</span>Témoignages</a>
+      </div>
+      <div class="nav-mobile-cta">
+        <a href="devis.html" class="btn btn-primary" onclick="toggleMenu()">Devis gratuit →</a>
+        <p class="nav-mobile-tagline">Votre projet mérite le meilleur.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="case-hero">
+    <div class="container">
+      <div class="case-hero-inner">
+        <div class="case-hero-content">
+          <div class="page-breadcrumb" style="margin-bottom:20px">
+            <a href="index.html">Accueil</a> / <a href="realisations.html">Nos réalisations</a> / <span>Élec Prime</span>
+          </div>
+          <div class="case-badge">⚡ Étude de cas — Électricité</div>
+          <h1>Comment on a bâti la présence digitale<br><span class="gradient-text">d'Élec Prime</span></h1>
+          <p class="case-hero-subtitle">Site web premium, identité visuelle forte et système de réservation en ligne — une transformation complète pour un électricien indépendant en Île-de-France.</p>
+          <div class="case-meta">
+            <div class="case-meta-item">
+              <div class="case-meta-label">Client</div>
+              <div class="case-meta-value">Julien Martin</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Secteur</div>
+              <div class="case-meta-value">Électricité</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Zone</div>
+              <div class="case-meta-value">Île-de-France</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Services</div>
+              <div class="case-meta-value">Site web · Logo · Réservation</div>
+            </div>
+            <div class="case-meta-item">
+              <div class="case-meta-label">Durée</div>
+              <div class="case-meta-value">7 jours</div>
+            </div>
+          </div>
+        </div>
+        <div class="case-hero-visual">
+          <img src="images/elecprime_mockup.png" alt="Mockup du site Élec Prime" class="case-hero-mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOT PRINCIPAL -->
+  <section class="case-screenshot-hero">
+    <div class="container">
+      <div class="case-browser">
+        <div class="case-browser-bar">
+          <div class="case-browser-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="case-browser-url">elecprime.fr</div>
+        </div>
+        <img src="images/elec-prime-hero.png" alt="Page d'accueil du site Élec Prime">
+      </div>
+    </div>
+  </section>
+
+  <!-- LE DÉFI -->
+  <section class="case-section">
+    <div class="container">
+      <div class="case-two-col">
+        <div>
+          <div class="case-label">Le défi</div>
+          <h2 class="case-title">Un excellent électricien,<br>invisible en ligne</h2>
+          <p class="case-body">Julien Martin exerce depuis plus de 12 ans comme électricien indépendant en Île-de-France. Sa réputation reposait entièrement sur le bouche-à-oreille — efficace, mais limité. Sans présence digitale, il passait à côté de dizaines de clients chaque mois qui cherchaient un électricien certifié sur Google.</p>
+          <p class="case-body" style="margin-top:16px">Les enjeux étaient clairs : créer une identité visuelle forte, un site qui inspire confiance dès le premier regard, et un parcours client simplifié avec devis et réservation en ligne.</p>
+        </div>
+        <div>
+          <div class="case-label">Les services fournis</div>
+          <h2 class="case-title" style="visibility:hidden;height:0;margin:0">—</h2>
+          <div class="case-services-list">
+            <div class="case-service-tag">🌐 Création de site web</div>
+            <div class="case-service-tag">🎨 Identité visuelle</div>
+            <div class="case-service-tag">📋 Formulaire de devis</div>
+            <div class="case-service-tag">📅 Réservation en ligne</div>
+            <div class="case-service-tag">🔍 SEO local</div>
+            <div class="case-service-tag">📱 Design responsive</div>
+          </div>
+          <p class="case-body" style="margin-top:24px">Un pack complet pensé pour maximiser la visibilité locale et convertir les visiteurs en clients — sans friction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA SOLUTION -->
+  <section class="case-section case-section--alt">
+    <div class="container">
+      <div class="case-label">La solution</div>
+      <h2 class="case-title">Un site premium qui inspire confiance</h2>
+      <p class="case-body" style="max-width:680px">On a opté pour un design sombre et épuré, avec une palette noir/or qui reflète le positionnement premium d'Élec Prime. Chaque section du site répond à une question précise du visiteur, jusqu'au bouton de réservation qui convertit.</p>
+
+      <!-- GALERIE DE PHOTOS -->
+      <div class="case-gallery">
+        <!-- Photo 1 : section services ou autre vue du site -->
+        <div class="case-photo-placeholder" id="photo-slot-1">
+          <span style="font-size:28px">📸</span>
+          <strong style="color:var(--text-muted);font-size:14px">Photo à venir</strong>
+          <span>Section services ou vue mobile</span>
+        </div>
+        <!-- Photo 2 : identité visuelle, logo, etc. -->
+        <div class="case-photo-placeholder" id="photo-slot-2">
+          <span style="font-size:28px">📸</span>
+          <strong style="color:var(--text-muted);font-size:14px">Photo à venir</strong>
+          <span>Identité visuelle / logo</span>
+        </div>
+        <!-- Photo 3 : formulaire devis ou réservation -->
+        <div class="case-photo-placeholder" id="photo-slot-3">
+          <span style="font-size:28px">📸</span>
+          <strong style="color:var(--text-muted);font-size:14px">Photo à venir</strong>
+          <span>Formulaire de devis en ligne</span>
+        </div>
+        <!-- Photo 4 : version mobile ou autre section -->
+        <div class="case-photo-placeholder" id="photo-slot-4">
+          <span style="font-size:28px">📸</span>
+          <strong style="color:var(--text-muted);font-size:14px">Photo à venir</strong>
+          <span>Version mobile / responsive</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉSULTATS -->
+  <section class="case-section">
+    <div class="container">
+      <div class="case-label">Les résultats</div>
+      <h2 class="case-title">Des chiffres qui parlent d'eux-mêmes</h2>
+      <p class="case-body">Dès les premières semaines, la nouvelle présence digitale d'Élec Prime a transformé la façon dont Julien acquiert ses clients.</p>
+      <div class="case-results-grid">
+        <div class="case-result-card">
+          <strong>12+</strong>
+          <small>Années d'expérience mises en valeur</small>
+        </div>
+        <div class="case-result-card">
+          <strong>500+</strong>
+          <small>Chantiers affichés en réalisations</small>
+        </div>
+        <div class="case-result-card">
+          <strong>98%</strong>
+          <small>Taux de satisfaction clients</small>
+        </div>
+        <div class="case-result-card">
+          <strong>24h</strong>
+          <small>Dépannage urgent mis en avant</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="page-cta">
+    <div class="container">
+      <div class="page-cta-inner">
+        <h2>Votre réalisation sera la prochaine.</h2>
+        <p>Comme Julien, donnez à votre activité la visibilité qu'elle mérite — en 7 jours.</p>
+        <div class="page-cta-actions">
+          <a href="devis.html" class="btn btn-primary btn-lg">Demander mon devis gratuit</a>
+          <a href="realisations.html" class="btn btn-ghost btn-lg">Voir toutes nos réalisations →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="logo.svg" alt="NextLink Studio"></a>
+        <p>On aide les artisans et indépendants à se faire connaître en ligne — rapidement, simplement, efficacement.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h5>Expertise</h5>
+        <ul>
+          <li><a href="site-web.html">Création de site web</a></li>
+          <li><a href="identite-visuelle.html">Identité visuelle</a></li>
+          <li><a href="posts-linkedin.html">Posts LinkedIn</a></li>
+          <li><a href="creation-print.html">Création print</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Agence</h5>
+        <ul>
+          <li><a href="realisations.html">Nos réalisations</a></li>
+          <li><a href="tarifs.html">Tarifs</a></li>
+          <li><a href="index.html#temoignages">Témoignages</a></li>
+          <li><a href="devis.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@nextlinkstudio.fr">hello@nextlinkstudio.fr</a></li>
+          <li><a href="tel:+33600000000">06 00 00 00 00</a></li>
+          <li>Paris — France</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2024 NextLink Studio — Tous droits réservés</p>
+      <div class="footer-legal">
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
