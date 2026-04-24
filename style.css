@@ -762,6 +762,12 @@ body {
   object-position: top;
   transition: transform 0.55s ease;
 }
+@media (max-width: 768px) {
+  .portfolio-featured-img img {
+    height: auto;
+    object-fit: unset;
+  }
+}
 .portfolio-card--featured:hover .portfolio-featured-img img { transform: scale(1.03); }
 .portfolio-featured-info {
   position: absolute;
