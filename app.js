@@ -28,6 +28,36 @@ document.addEventListener('click', function(e) {
   }
 });
 
+
+/* ── PARALLAX ── */
+(function () {
+  const heroBg = document.querySelector('.hero-parallax-bg');
+  const painEl = document.querySelector('.pain');
+  const painBg = document.querySelector('.pain-parallax-bg');
+  let ticking = false;
+
+  function update() {
+    const scrollY = window.scrollY;
+    if (heroBg) {
+      heroBg.style.transform = 'translateY(' + (scrollY * 0.5) + 'px)';
+    }
+    if (painBg && painEl) {
+      const offset = (scrollY - painEl.offsetTop) * 0.4;
+      painBg.style.transform = 'translateY(' + offset + 'px)';
+    }
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  update();
+})();
+
 /* ── NAV SHADOW ── */
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('.nav-wrapper');

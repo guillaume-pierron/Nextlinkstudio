@@ -378,20 +378,38 @@ body {
 .hero {
   position: relative;
   background: var(--bg);
-  background-image: url('images/header_artisan.png');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   padding: 140px 0 120px;
   overflow: hidden;
   text-align: center;
+}
+
+/* Divs parallax */
+.hero-parallax-bg,
+.pain-parallax-bg {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  right: 0;
+  bottom: -20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: transform;
+  pointer-events: none;
+}
+.hero-parallax-bg {
+  background-image: url('images/header_artisan.png');
+  background-position: center top;
+}
+.pain-parallax-bg {
+  background-image: url('images/artisan.png');
+  background-position: center right;
 }
 
 /* Purple gradient bloom en haut + grid overlay */
 .hero-bg {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(180deg, rgba(15,5,50,0.88) 0%, rgba(60,20,140,0.70) 40%, rgba(91,33,182,0.48) 75%, rgba(124,58,237,0.25) 100%),
     radial-gradient(ellipse 90% 65% at 50% 0%, rgba(109,40,217,0.38) 0%, transparent 60%),
@@ -411,8 +429,10 @@ body {
   mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 0%, transparent 100%);
 }
 
+
 .hero-content {
   position: relative;
+  z-index: 2;
   max-width: 820px;
   margin: 0 auto;
 }
@@ -621,18 +641,19 @@ body {
 .pain {
   padding: 96px 0;
   background: var(--bg);
-  background-image:
-    linear-gradient(105deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 45%, rgba(255,255,255,0.62) 100%),
-    url('images/artisan.png');
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   position: relative;
   overflow: hidden;
 }
+.pain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 45%, rgba(255,255,255,0.62) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
 
-.pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; position: relative; }
+.pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; position: relative; z-index: 2; }
 .pain-text h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(26px,3.5vw,38px); font-weight: 800; line-height: 1.15; letter-spacing: -0.025em; color: var(--text); margin-bottom: 20px; }
 .pain-text p { color: var(--text-muted); font-size: 16px; line-height: 1.7; margin-bottom: 14px; }
 
@@ -2225,6 +2246,7 @@ body {
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .services-grid     { grid-template-columns: repeat(2, 1fr); }
@@ -2259,7 +2281,6 @@ body {
   .services-grid  { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .footer-inner   { grid-template-columns: 1fr; gap: 32px; }
-  .hero, .pain    { background-attachment: scroll; }
   .hero           { padding: 60px 0 72px; }
   .hero-actions   { flex-direction: column; align-items: center; }
   .hero-actions .btn { width: 100%; max-width: 340px; }
