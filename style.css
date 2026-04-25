@@ -393,7 +393,7 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(30,10,80,0.72) 0%, rgba(91,33,182,0.50) 40%, rgba(124,58,237,0.28) 75%, rgba(124,58,237,0.10) 100%),
+    linear-gradient(180deg, rgba(15,5,50,0.88) 0%, rgba(60,20,140,0.70) 40%, rgba(91,33,182,0.48) 75%, rgba(124,58,237,0.25) 100%),
     radial-gradient(ellipse 90% 65% at 50% 0%, rgba(109,40,217,0.38) 0%, transparent 60%),
     radial-gradient(ellipse 55% 50% at 10% 0%, rgba(124,58,237,0.18) 0%, transparent 60%),
     radial-gradient(ellipse 50% 40% at 90% 5%, rgba(139,92,246,0.14) 0%, transparent 55%);
@@ -421,11 +421,18 @@ body {
 .hero .hero-title        { color: #ffffff; }
 .hero .hero-subtitle     { color: #ffffff; text-shadow: 0 1px 12px rgba(0,0,0,0.55); }
 .hero .gradient-text {
-  background: linear-gradient(125deg, #ffffff 0%, #e9d5ff 40%, #f5d0fe 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 18px rgba(216,180,254,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.40));
+  background: none;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-shadow:
+    0 0 40px rgba(255,255,255,0.45),
+    0 0 12px rgba(255,255,255,0.25),
+    0 2px 8px rgba(0,0,0,0.40);
+  filter: none;
+  position: relative;
 }
 .hero .hero-badge {
   background: rgba(255,255,255,0.14);
@@ -615,7 +622,7 @@ body {
   padding: 96px 0;
   background: var(--bg);
   background-image:
-    linear-gradient(105deg, rgba(245,243,255,0.96) 0%, rgba(237,233,254,0.85) 45%, rgba(221,214,254,0.60) 100%),
+    linear-gradient(105deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 45%, rgba(255,255,255,0.62) 100%),
     url('images/artisan.png');
   background-size: cover;
   background-position: center right;
@@ -1143,8 +1150,28 @@ body {
 .temoignages .section-header { margin-bottom: 56px; }
 .temoignages .section-badge  { background: rgba(124,58,237,0.1); color: var(--purple-vivid); border-color: rgba(124,58,237,0.25); }
 .temoignages .section-header h2 { color: var(--text); }
-.testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+/* Carousel */
+.testimonials-carousel {
+  overflow: hidden;
+  position: relative;
+  /* Fondu sur les bords */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+.testimonials-track {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: scroll-testimonials 40s linear infinite;
+}
+.testimonials-track:hover { animation-play-state: paused; }
+@keyframes scroll-testimonials {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
 .testimonial {
+  width: 380px;
+  flex-shrink: 0;
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.07);
   border-top: 3px solid var(--purple-vivid);
@@ -2208,7 +2235,7 @@ body {
   .steps::before     { display: none; }
   .portfolio-grid    { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid      { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
-  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial { width: 300px; }
   .footer-inner      { grid-template-columns: 1fr 1fr; }
   .pain-grid         { grid-template-columns: 1fr; gap: 40px; }
   .steps             { grid-template-columns: 1fr; }
