@@ -395,8 +395,8 @@ body {
   pointer-events: none;
 }
 .hero-parallax-bg {
-  top: -8%;
-  bottom: -8%;
+  top: 0%;
+  bottom: 0%;
   background-image: url('images/header_artisan.png');
   background-position: center top;
 }
