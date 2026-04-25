@@ -1457,6 +1457,29 @@ body {
 .print-realisation-img { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: 0 24px 80px rgba(0,0,0,0.5); max-width: 860px; margin: 0 auto; }
 .print-realisation-img img { width: 100%; height: auto; display: block; }
 
+.print-realisation-flyer {
+  max-width: 520px;
+  margin: 0 auto;
+}
+.print-realisation-flyer img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  filter:
+    drop-shadow(0 4px 8px rgba(0,0,0,0.12))
+    drop-shadow(0 16px 40px rgba(0,0,0,0.18))
+    drop-shadow(0 40px 80px rgba(0,0,0,0.14));
+  transition: filter 0.35s ease, transform 0.35s ease;
+}
+.print-realisation-flyer img:hover {
+  filter:
+    drop-shadow(0 8px 16px rgba(0,0,0,0.14))
+    drop-shadow(0 24px 56px rgba(0,0,0,0.22))
+    drop-shadow(0 56px 96px rgba(0,0,0,0.16));
+  transform: translateY(-6px);
+}
+
 /* Expertise CTA block */
 .expertise-cta-block {
   margin-top: 52px;
