@@ -382,6 +382,7 @@ body {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   padding: 140px 0 120px;
   overflow: hidden;
   text-align: center;
@@ -420,10 +421,11 @@ body {
 .hero .hero-title        { color: #ffffff; }
 .hero .hero-subtitle     { color: #ffffff; text-shadow: 0 1px 12px rgba(0,0,0,0.55); }
 .hero .gradient-text {
-  background: linear-gradient(125deg, #ddd6fe 0%, #c4b5fd 45%, #f0abfc 100%);
+  background: linear-gradient(125deg, #ffffff 0%, #e9d5ff 40%, #f5d0fe 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 18px rgba(216,180,254,0.55)) drop-shadow(0 2px 6px rgba(0,0,0,0.40));
 }
 .hero .hero-badge {
   background: rgba(255,255,255,0.14);
@@ -613,11 +615,12 @@ body {
   padding: 96px 0;
   background: var(--bg);
   background-image:
-    linear-gradient(105deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.88) 45%, rgba(255,255,255,0.62) 100%),
+    linear-gradient(105deg, rgba(245,243,255,0.96) 0%, rgba(237,233,254,0.85) 45%, rgba(221,214,254,0.60) 100%),
     url('images/artisan.png');
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   position: relative;
   overflow: hidden;
 }
@@ -761,11 +764,10 @@ body {
 .how::before {
   content: '';
   position: absolute;
-  top: 0; left: 50%; transform: translateX(-50%);
-  width: 900px; height: 600px;
+  inset: 0;
   background:
     linear-gradient(180deg, rgba(124,58,237,0.05) 0%, transparent 50%, rgba(124,58,237,0.03) 100%),
-    radial-gradient(ellipse, rgba(124,58,237,0.09) 0%, transparent 65%);
+    radial-gradient(ellipse 80% 70% at 50% 50%, rgba(124,58,237,0.09) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -2027,10 +2029,31 @@ body {
   transition: var(--transition);
 }
 .faq-question:hover { color: var(--purple-vivid); }
-.faq-arrow { font-size: 20px; font-weight: 300; flex-shrink: 0; color: var(--purple-vivid); transition: var(--transition); }
+.faq-arrow {
+  font-size: 22px;
+  font-weight: 300;
+  flex-shrink: 0;
+  color: var(--purple-vivid);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+  display: inline-block;
+}
 .faq-question.open .faq-arrow { transform: rotate(45deg); }
-.faq-answer { display: none; padding: 0 24px 20px; }
-.faq-answer.open { display: block; }
+.faq-answer {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 24px;
+  transition:
+    max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.28s ease,
+    padding 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.faq-answer.open {
+  max-height: 300px;
+  opacity: 1;
+  padding: 0 24px 20px;
+}
 .faq-answer p { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
 /* ── PERF DASHBOARD (expertise) ── */
@@ -2209,6 +2232,7 @@ body {
   .services-grid  { grid-template-columns: 1fr; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .footer-inner   { grid-template-columns: 1fr; gap: 32px; }
+  .hero, .pain    { background-attachment: scroll; }
   .hero           { padding: 60px 0 72px; }
   .hero-actions   { flex-direction: column; align-items: center; }
   .hero-actions .btn { width: 100%; max-width: 340px; }
