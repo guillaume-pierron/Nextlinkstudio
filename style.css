@@ -537,15 +537,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-.pain::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 48% 60% at 100% 50%, rgba(239,68,68,0.05) 0%, transparent 55%),
-    radial-gradient(ellipse 48% 60% at 0% 50%,   rgba(124,58,237,0.06) 0%, transparent 55%);
-  pointer-events: none;
-}
 
 .pain-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; position: relative; }
 .pain-text h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(26px,3.5vw,38px); font-weight: 800; line-height: 1.15; letter-spacing: -0.025em; color: var(--text); margin-bottom: 20px; }
@@ -1022,13 +1013,13 @@ body {
 .pricing-note a:hover { text-decoration: underline; }
 
 /* ── TÉMOIGNAGES ── */
-.temoignages { padding: 100px 0; background: var(--bg); position: relative; overflow: hidden; }
+.temoignages { padding: 100px 0; background: var(--bg-alt); position: relative; overflow: hidden; }
 .temoignages::before {
   content: '';
   position: absolute;
   bottom: -200px; right: -100px;
   width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(245,158,11,0.05) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(124,58,237,0.09) 0%, transparent 65%);
   pointer-events: none;
 }
 .temoignages::after {
@@ -1036,35 +1027,36 @@ body {
   position: absolute;
   top: -100px; left: -100px;
   width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(124,58,237,0.06) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(139,92,246,0.07) 0%, transparent 65%);
   pointer-events: none;
 }
 .temoignages .section-header { margin-bottom: 56px; }
-.temoignages .section-badge  { background: rgba(245,158,11,0.1); color: #f59e0b; border-color: rgba(245,158,11,0.2); }
+.temoignages .section-badge  { background: rgba(124,58,237,0.1); color: var(--purple-vivid); border-color: rgba(124,58,237,0.25); }
 .temoignages .section-header h2 { color: var(--text); }
 .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .testimonial {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-top: 3px solid var(--purple-vivid);
   border-radius: var(--radius-lg);
   padding: 32px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05), 0 8px 24px rgba(0,0,0,0.06);
 }
 .testimonial::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, rgba(245,158,11,0.04) 0%, transparent 50%);
+  background: linear-gradient(145deg, rgba(124,58,237,0.04) 0%, transparent 55%);
   pointer-events: none;
   transition: opacity .3s;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 .testimonial:hover {
-  background: var(--bg-card-hover);
-  border-color: rgba(245,158,11,0.3);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(245,158,11,0.18), 0 0 48px rgba(245,158,11,0.04);
+  border-color: var(--border-purple);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 0 0 1px var(--border-purple), 0 0 48px rgba(124,58,237,0.07);
   transform: translateY(-4px);
 }
 .testimonial:hover::before { opacity: 1; }
@@ -1072,7 +1064,7 @@ body {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 80px;
   line-height: 0.75;
-  color: rgba(245,158,11,0.14);
+  color: rgba(124,58,237,0.15);
   margin-bottom: 16px;
   display: block;
   user-select: none;
@@ -1083,11 +1075,11 @@ body {
 .testimonial-avatar {
   width: 46px; height: 46px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  background: linear-gradient(135deg, var(--purple-vivid), var(--purple-dark));
   display: flex; align-items: center; justify-content: center;
   color: #fff; font-weight: 800; font-size: 13px;
   flex-shrink: 0;
-  box-shadow: 0 0 0 2px rgba(245,158,11,0.3), 0 4px 12px rgba(245,158,11,0.2);
+  box-shadow: 0 0 0 2px rgba(124,58,237,0.25), 0 4px 12px rgba(124,58,237,0.2);
 }
 .testimonial-author strong { color: var(--text); font-size: 14px; display: block; }
 .testimonial-author span   { color: var(--text-subtle); font-size: 12px; }
