@@ -1841,14 +1841,9 @@ body {
 
 /* Print visual hero (colonne droite) */
 .print-visual-hero {
-  background: var(--bg-alt);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  padding: 52px 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 420px;
 }
 .print-visual-img {
   max-width: 300px;
@@ -2384,6 +2379,11 @@ body {
   display: block;
   border-radius: 20px;
   box-shadow: 0 32px 72px rgba(109,40,217,0.18), 0 8px 24px rgba(0,0,0,0.10);
+}
+.mockup-phone-img--raw {
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
 }
 .perf-bars {
   display: flex;
