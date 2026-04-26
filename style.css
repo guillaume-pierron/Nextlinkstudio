@@ -2882,19 +2882,23 @@ body {
    ============================================================ */
 
 .service-spotlights {
-  padding: 96px 0;
-  background: var(--bg-alt);
+  /* wrapper section only */
+}
+
+.spotlight-block {
+  padding: 88px 0;
   border-top: 1px solid var(--border);
 }
+.spotlight-block:last-child { border-bottom: 1px solid var(--border); }
+.spotlight-block:nth-child(odd)  { background: var(--bg-alt); }
+.spotlight-block:nth-child(even) { background: var(--bg); }
 
 .spotlight-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 72px;
   align-items: center;
-  margin-bottom: 96px;
 }
-.spotlight-row:last-child { margin-bottom: 0; }
 .spotlight-row--reverse .spotlight-text  { order: 2; }
 .spotlight-row--reverse .spotlight-visual { order: 1; }
 
@@ -3226,17 +3230,16 @@ body {
 
 /* ── RESPONSIVE — SERVICE SPOTLIGHTS ── */
 @media (max-width: 900px) {
+  .spotlight-block { padding: 64px 0; }
   .spotlight-row {
     grid-template-columns: 1fr;
     gap: 40px;
-    margin-bottom: 64px;
   }
   .spotlight-row--reverse .spotlight-text  { order: 0; }
   .spotlight-row--reverse .spotlight-visual { order: 0; }
 }
 @media (max-width: 600px) {
-  .service-spotlights { padding: 64px 0; }
-  .spotlight-row { margin-bottom: 48px; }
+  .spotlight-block { padding: 48px 0; }
   .brand-mockup, .social-mockup, .print-business-card { padding: 20px; }
   .print-business-card { padding: 22px 20px; }
 }
