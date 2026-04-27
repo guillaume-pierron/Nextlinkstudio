@@ -1756,7 +1756,8 @@ body {
   display: block;
   filter: drop-shadow(0 4px 12px rgba(124,58,237,0.20));
 }
-.page-hero-img { max-width: 240px; justify-self: end; }
+.page-hero-img { justify-self: end; }
+.about-hero-img { max-width: 240px; }
 .page-hero-img img {
   width: 100%;
   height: auto;
@@ -2767,7 +2768,8 @@ body {
   .steps::before     { display: none; }
   .contact-grid      { grid-template-columns: 1fr; }
   .page-hero--split .page-hero-content { grid-template-columns: 1fr; }
-  .page-hero-img { order: -1; max-width: 180px; justify-self: center; margin: 0 auto; }
+  .page-hero-img { order: -1; }
+  .about-hero-img { max-width: 180px; justify-self: center; margin: 0 auto; }
   .about-hero-logo-wrap { display: none; }
   .iv-analogy        { grid-template-columns: 1fr; gap: 32px; }
   .iv-includes-grid  { grid-template-columns: 1fr; }
