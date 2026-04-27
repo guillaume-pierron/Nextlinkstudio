@@ -1076,6 +1076,11 @@ body {
 .portfolio-grid--single { max-width: 800px; margin: 0 auto; }
 .portfolio-grid--double { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
 @media (max-width: 768px) { .portfolio-grid--double { grid-template-columns: 1fr; } }
+.portfolio-grid--triple { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 0 auto; }
+@media (max-width: 900px) { .portfolio-grid--triple { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .portfolio-grid--triple { grid-template-columns: 1fr; } }
+.portfolio-grid--triple .portfolio-featured-img img { height: 280px; }
+.portfolio-tag--wood { background: rgba(180,120,60,0.12); color: #b4783c; border-color: rgba(180,120,60,0.28); }
 .portfolio-card--featured {
   display: block;
   text-decoration: none;
