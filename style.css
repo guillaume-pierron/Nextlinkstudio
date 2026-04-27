@@ -666,13 +666,22 @@ body {
 /* ── PAIN SECTION ── */
 .pain {
   padding: 96px 0;
-  background:
-    linear-gradient(rgba(124,58,237,0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(124,58,237,0.07) 1px, transparent 1px),
-    var(--bg-alt);
-  background-size: 48px 48px, 48px 48px, auto;
+  background: var(--bg-alt);
   position: relative;
   overflow: hidden;
+}
+.pain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(124,58,237,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,58,237,0.07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 .pain::before {
   content: '';
@@ -2279,6 +2288,20 @@ body {
 
 /* ── PORTFOLIO FULL ── */
 .realisations-full { padding: 48px 0 96px; background: var(--bg); }
+.realisations-full .portfolio-featured-info {
+  opacity: 1;
+  transform: translateY(0);
+  background: linear-gradient(to top, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.30) 80%, transparent 100%);
+  padding-top: 60px;
+}
+.realisations-full .portfolio-result--link {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.35);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
 .portfolio-grid-full { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .portfolio-card-full {
   background: var(--bg-card);
