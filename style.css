@@ -457,17 +457,6 @@ body {
   color: #ffffff;
   border-color: rgba(255,255,255,0.30);
 }
-.hero .hero-service-tag {
-  background: rgba(255,255,255,0.10);
-  border-color: rgba(255,255,255,0.22);
-  color: #ffffff;
-}
-.hero .hero-service-tag:hover {
-  background: rgba(255,255,255,0.20);
-  border-color: rgba(255,255,255,0.45);
-  color: #ffffff;
-  transform: translateY(-2px);
-}
 .hero .btn-ghost {
   background: rgba(255,255,255,0.22);
   color: #ffffff;
@@ -558,24 +547,24 @@ body {
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: rgba(255,255,255,0.78);
+  background: rgba(255,255,255,0.08);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
   border-radius: 99px;
   font-size: 14px;
   font-weight: 600;
-  color: var(--text);
+  color: rgba(255,255,255,0.90);
   text-decoration: none;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease, color 0.22s ease;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  transition: background 0.22s ease, border-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
 }
 .hero-service-tag:hover {
-  background: rgba(255,255,255,0.96);
-  border-color: var(--purple);
-  color: var(--purple-dark);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(124,58,237,0.14);
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(196,181,253,0.55);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.20);
 }
 
 /* ── RÉSULTATS (stats band) ── */
