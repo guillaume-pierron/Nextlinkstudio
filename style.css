@@ -1756,6 +1756,7 @@ body {
   display: block;
   filter: drop-shadow(0 4px 12px rgba(124,58,237,0.20));
 }
+.page-hero-img { max-width: 420px; justify-self: end; }
 .page-hero-img img {
   width: 100%;
   height: auto;
