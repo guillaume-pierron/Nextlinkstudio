@@ -23,7 +23,7 @@
           <a href="expertise.html" class="nav-has-dropdown active">Expertise <span class="nav-arrow">▾</span></a>
           <div class="dropdown-menu">
             <div class="dropdown-menu-inner">
-              <div class="dm-header">Nos expertises</div>
+              <div class="dm-header">Mes expertises</div>
               <a href="site-web.html" class="dropdown-item di-web">
                 <div class="di-icon-wrap"><span>🌐</span></div>
                 <div class="di-text"><strong>Création de site web</strong><small>Design sur mesure, livré en 7 jours</small></div>
@@ -48,9 +48,8 @@
             </div>
           </div>
         </li>
-        <li><a href="realisations.html">Nos réalisations</a></li>
+        <li><a href="realisations.html">Mes réalisations</a></li>
         <li><a href="tarifs.html">Tarifs</a></li>
-        <li><a href="index.html#temoignages">Témoignages</a></li>
       </ul>
       <a href="devis.html" class="btn btn-primary nav-cta">Devis gratuit</a>
       <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
@@ -73,9 +72,8 @@
             <a href="creation-print.html" onclick="toggleMenu()"><span class="nm-service-icon">🖨️</span>Création print</a>
           </div></div>
         </div>
-        <a href="realisations.html" onclick="toggleMenu()"><span class="nm-num">02</span>Nos réalisations</a>
+        <a href="realisations.html" onclick="toggleMenu()"><span class="nm-num">02</span>Mes réalisations</a>
         <a href="tarifs.html" onclick="toggleMenu()"><span class="nm-num">03</span>Tarifs</a>
-        <a href="index.html#temoignages" onclick="toggleMenu()"><span class="nm-num">04</span>Témoignages</a>
       </div>
       <div class="nav-mobile-cta">
         <a href="devis.html" class="btn btn-primary" onclick="toggleMenu()">Devis gratuit →</a>
@@ -85,14 +83,50 @@
   </div>
 
   <!-- PAGE HERO -->
-  <section class="page-hero">
+  <section class="page-hero page-hero--split">
     <div class="page-hero-bg"></div>
     <div class="container page-hero-content">
-      <div class="page-breadcrumb"><a href="index.html">Accueil</a> / <a href="expertise.html">Expertise</a> / <span>Création print</span></div>
-      <h1>Des supports imprimés qui <span class="gradient-text">laissent une vraie impression</span></h1>
-      <p>Flyers, kakémonos, cartes de visite — on conçoit vos supports print à vos couleurs pour vous démarquer partout où vous passez.</p>
+      <div class="page-hero-text">
+        <div class="page-breadcrumb"><a href="index.html">Accueil</a> / <a href="expertise.html">Expertise</a> / <span>Création print</span></div>
+        <h1>Des supports imprimés qui <span class="gradient-text">laissent une vraie impression</span></h1>
+        <p>Flyers, kakémonos, cartes de visite — je conçois vos supports print à vos couleurs pour vous démarquer partout où vous passez.</p>
+        <div class="expertise-tags">
+          <span>✅ Fichiers PDF HD inclus</span>
+          <span>✅ Cohérent avec votre charte</span>
+          <span>✅ Révisions incluses</span>
+        </div>
+      </div>
+      <div class="page-hero-img">
+        <img src="images/creation_print.png" alt="Création print par NextLink Studio" />
+      </div>
     </div>
   </section>
+
+  <!-- TICKER -->
+  <div class="sw-ticker" aria-hidden="true">
+    <div class="sw-ticker-track">
+      <span>Carte de visite</span><span class="sw-sep">✦</span>
+      <span>Flyer A5 & A4</span><span class="sw-sep">✦</span>
+      <span>Kakémono</span><span class="sw-sep">✦</span>
+      <span>Roll-up</span><span class="sw-sep">✦</span>
+      <span>Affiche</span><span class="sw-sep">✦</span>
+      <span>En-tête de devis</span><span class="sw-sep">✦</span>
+      <span>Covering véhicule</span><span class="sw-sep">✦</span>
+      <span>Polo & vêtements brodés</span><span class="sw-sep">✦</span>
+      <span>Tampon & cachet</span><span class="sw-sep">✦</span>
+      <span>Prêt à imprimer</span><span class="sw-sep">✦</span>
+      <span>Carte de visite</span><span class="sw-sep">✦</span>
+      <span>Flyer A5 & A4</span><span class="sw-sep">✦</span>
+      <span>Kakémono</span><span class="sw-sep">✦</span>
+      <span>Roll-up</span><span class="sw-sep">✦</span>
+      <span>Affiche</span><span class="sw-sep">✦</span>
+      <span>En-tête de devis</span><span class="sw-sep">✦</span>
+      <span>Covering véhicule</span><span class="sw-sep">✦</span>
+      <span>Polo & vêtements brodés</span><span class="sw-sep">✦</span>
+      <span>Tampon & cachet</span><span class="sw-sep">✦</span>
+      <span>Prêt à imprimer</span><span class="sw-sep">✦</span>
+    </div>
+  </div>
 
   <!-- CONTENU PRINCIPAL -->
   <section class="expertise-section" id="print">
@@ -138,10 +172,17 @@
           <div class="print-visual-hero">
             <img src="images/flyer_elec_prime.png" alt="Flyer Élec Prime — exemple de création print NextLink Studio" class="print-visual-img" />
           </div>
-          <div class="expertise-tags">
-            <span>✅ Fichiers PDF HD inclus</span>
-            <span>✅ Cohérent avec votre charte</span>
-            <span>✅ Révisions incluses</span>
+          <div class="print-formats">
+            <p class="print-formats-label">Formats disponibles</p>
+            <div class="print-formats-grid">
+              <span>A6 · Flyer</span>
+              <span>A5 · Flyer</span>
+              <span>A4 · Affiche</span>
+              <span>85×55mm · Carte</span>
+              <span>85×200mm · Dépliant</span>
+              <span>800×2000mm · Kakémono</span>
+            </div>
+            <p class="print-formats-note">Fichiers PDF HD livrés avec fonds perdus et traits de coupe — prêts à envoyer à l'imprimeur.</p>
           </div>
         </div>
       </div>
@@ -197,7 +238,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a href="index.html" class="logo"><img src="logo_nextlink_studio.svg" alt="NextLink Studio"></a>
-        <p>On aide les artisans et indépendants à se faire connaître en ligne — rapidement, simplement, efficacement.</p>
+        <p>J'aide les artisans et indépendants à se faire connaître en ligne — rapidement, simplement, efficacement.</p>
         <div class="footer-social">
           <a href="#" aria-label="LinkedIn">in</a>
           <a href="#" aria-label="Instagram">IG</a>
@@ -215,9 +256,8 @@
       <div class="footer-links">
         <h5>Agence</h5>
         <ul>
-          <li><a href="realisations.html">Nos réalisations</a></li>
+          <li><a href="realisations.html">Mes réalisations</a></li>
           <li><a href="tarifs.html">Tarifs</a></li>
-          <li><a href="index.html#temoignages">Témoignages</a></li>
           <li><a href="devis.html">Devis gratuit</a></li>
         </ul>
       </div>
