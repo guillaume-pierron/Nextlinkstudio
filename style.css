@@ -741,7 +741,7 @@ body {
   border: 1px solid var(--border);
   overflow: hidden;
   position: relative;
-  background: var(--bg-card);
+  background: var(--bg);
   transition: transform 0.28s cubic-bezier(0.22,1,0.36,1), box-shadow 0.28s ease;
 }
 .pain-card:hover { transform: translateY(-4px); }
