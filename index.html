@@ -50,6 +50,7 @@
         </li>
         <li><a href="realisations.html">Mes réalisations</a></li>
         <li><a href="tarifs.html">Tarifs</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
       </ul>
       <a href="devis.html" class="btn btn-primary nav-cta">Devis gratuit</a>
       <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
@@ -74,6 +75,7 @@
         </div>
         <a href="realisations.html" onclick="toggleMenu()"><span class="nm-num">02</span>Mes réalisations</a>
         <a href="tarifs.html" onclick="toggleMenu()"><span class="nm-num">03</span>Tarifs</a>
+        <a href="a-propos.html" onclick="toggleMenu()"><span class="nm-num">04</span>À propos</a>
       </div>
       <div class="nav-mobile-cta">
         <a href="devis.html" class="btn btn-primary" onclick="toggleMenu()">Devis gratuit →</a>
@@ -108,35 +110,14 @@
     </div>
   </section>
 
-  <!-- QUI SOMMES-NOUS -->
-  <section class="about-section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-photo-wrap">
-          <img src="images/guillaume.png" alt="Guillaume — NextLink Studio">
-        </div>
-        <div class="about-text">
-          <div class="section-badge">À propos</div>
-          <h2 class="about-heading">Moi c'est <span class="gradient-text">Guillaume.</span></h2>
-          <p class="about-lead">J'aide les artisans à ne plus perdre de chantiers par manque de visibilité.</p>
-          <p>Depuis plusieurs années, je travaille avec des artisans et indépendants excellents dans leur métier, mais invisibles sur internet. Ma mission : changer ça, rapidement et sans prise de tête.</p>
-          <a href="devis.html" class="btn btn-primary" style="margin-top:28px">Discutons de votre projet →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- PROBLÈME -->
   <section class="pain">
     <div class="container">
-    <div class="pain-grid">
-      <div class="pain-text">
-        <h2>Vos clients vous jugent<br /><span class="gradient-text">avant de vous appeler.</span></h2>
-        <p>Un site bancal, un logo amateur, aucune présence sur les réseaux — et le client appelle votre concurrent. Pas parce qu'il est meilleur que vous, mais parce qu'il inspire plus confiance.</p>
-        <p>NextLink Studio vous donne l'image que vous méritez — rapidement, sans prise de tête, à un prix juste.</p>
-        <a href="#services" class="btn btn-outline" style="margin-top:8px">Découvrir mes services →</a>
-      </div>
-      <div class="pain-cards">
+    <div class="pain-header">
+      <h2>Vos clients vous jugent<br /><span class="gradient-text">avant de vous appeler.</span></h2>
+      <p>Un site bancal, un logo amateur — et le client appelle votre concurrent. Pas parce qu'il est meilleur, mais parce qu'il inspire plus confiance.</p>
+    </div>
+    <div class="pain-cards">
         <div class="pain-card bad">
           <div class="pain-card-header">
             <div class="pain-card-icon">😤</div>
@@ -149,6 +130,7 @@
             <div class="pain-item"><span class="pi-icon bad">✕</span><span>Clients perdus avant le premier contact</span></div>
           </div>
         </div>
+        <div class="pain-vs">VS</div>
         <div class="pain-card good">
           <div class="pain-card-header">
             <div class="pain-card-icon">🚀</div>
@@ -163,54 +145,37 @@
         </div>
       </div>
     </div>
-    </div>
   </section>
 
-  <!-- SERVICES APERÇU -->
-  <section id="services" class="services-preview">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Mes expertises</div>
-        <h2>Tout ce qu'il faut pour<br /><span class="gradient-text">dominer votre secteur local</span></h2>
-      </div>
-      <div class="preview-cards">
-        <a href="site-web.html" class="preview-card pc-web">
-          <div class="preview-card-icon-wrap"><span>🌐</span></div>
-          <h3>Création de site web</h3>
-          <p>Design sur mesure, mobile-first, SEO local. Livré en 7 jours avec devis en ligne et réservation de créneaux intégrés.</p>
-          <span class="preview-card-link">En savoir plus <span class="pca">→</span></span>
-        </a>
-        <a href="identite-visuelle.html" class="preview-card pc-design">
-          <div class="preview-card-icon-wrap"><span>🎨</span></div>
-          <h3>Identité visuelle</h3>
-          <p>Logo professionnel, charte graphique et supports de communication qui inspirent confiance dès le premier regard.</p>
-          <span class="preview-card-link">En savoir plus <span class="pca">→</span></span>
-        </a>
-        <a href="posts-linkedin.html" class="preview-card pc-linkedin">
-          <div class="preview-card-icon-wrap"><span>📱</span></div>
-          <h3>Réseaux sociaux</h3>
-          <p>Je rédige et publie des contenus qui valorisent vos chantiers et attirent clients professionnels et partenaires.</p>
-          <span class="preview-card-link">En savoir plus <span class="pca">→</span></span>
-        </a>
-        <a href="creation-print.html" class="preview-card pc-print">
-          <div class="preview-card-icon-wrap"><span>🖨️</span></div>
-          <h3>Création print</h3>
-          <p>Flyers, kakémonos et cartes de visite à vos couleurs. Des supports imprimés percutants pour vous démarquer partout où vous passez.</p>
-          <span class="preview-card-link">En savoir plus <span class="pca">→</span></span>
-        </a>
-      </div>
-
+  <!-- TICKER -->
+  <div class="mid-ticker">
+    <div class="mid-ticker-track">
+      <span>🌐 Site web professionnel</span><span class="mid-ticker-sep">·</span>
+      <span>🎨 Identité visuelle sur mesure</span><span class="mid-ticker-sep">·</span>
+      <span>📱 Réseaux sociaux gérés pour vous</span><span class="mid-ticker-sep">·</span>
+      <span>🖨️ Flyers, cartes de visite, kakémonos</span><span class="mid-ticker-sep">·</span>
+      <span>⚡ Livré en 7 jours</span><span class="mid-ticker-sep">·</span>
+      <span>📍 SEO local optimisé</span><span class="mid-ticker-sep">·</span>
+      <span>✓ Sans engagement</span><span class="mid-ticker-sep">·</span>
+      <span>🌐 Site web professionnel</span><span class="mid-ticker-sep">·</span>
+      <span>🎨 Identité visuelle sur mesure</span><span class="mid-ticker-sep">·</span>
+      <span>📱 Réseaux sociaux gérés pour vous</span><span class="mid-ticker-sep">·</span>
+      <span>🖨️ Flyers, cartes de visite, kakémonos</span><span class="mid-ticker-sep">·</span>
+      <span>⚡ Livré en 7 jours</span><span class="mid-ticker-sep">·</span>
+      <span>📍 SEO local optimisé</span><span class="mid-ticker-sep">·</span>
+      <span>✓ Sans engagement</span><span class="mid-ticker-sep">·</span>
     </div>
-  </section>
+  </div>
 
   <!-- SERVICES EN DÉTAIL -->
-  <section class="service-spotlights">
+  <section id="services" class="service-spotlights">
 
     <!-- Création de site web -->
     <div class="spotlight-block">
       <div class="container">
         <div class="spotlight-row">
           <div class="spotlight-text">
+            <span class="spotlight-num">01</span>
             <div class="section-badge">🌐 Création de site web</div>
             <h3>Un site qui attire des clients<br /><span class="gradient-text">et travaille pour vous 24h/24</span></h3>
             <p>Design sur mesure, mobile-first, SEO local optimisé. Votre site vitrine accepte les demandes de devis et réserve vos créneaux pendant que vous êtes sur le chantier.</p>
@@ -221,6 +186,7 @@
               <li><span class="sl-check">✓</span> Livré en 7 jours, mobile-first</li>
             </ul>
             <a href="site-web.html" class="btn btn-primary">Voir l'offre site web →</a>
+            <div class="spotlight-proof">✓ Premiers devis reçus dès la mise en ligne</div>
           </div>
           <div class="spotlight-visual">
             <img src="images/websites_images.png" alt="Exemples de sites web créés par NextLink Studio" class="spotlight-img" />
@@ -234,6 +200,7 @@
       <div class="container">
         <div class="spotlight-row spotlight-row--reverse">
           <div class="spotlight-text">
+            <span class="spotlight-num">02</span>
             <div class="section-badge">🎨 Identité visuelle</div>
             <h3>Un logo qui donne<br /><span class="gradient-text">envie de vous appeler</span></h3>
             <p>Vos clients jugent votre professionnalisme en quelques secondes. Je conçois une identité complète qui inspire confiance dès le premier regard — sur Google, sur vos cartes de visite, sur votre site.</p>
@@ -244,6 +211,7 @@
               <li><span class="sl-check">✓</span> Utilisable partout, immédiatement</li>
             </ul>
             <a href="identite-visuelle.html" class="btn btn-primary">Voir l'offre identité visuelle →</a>
+            <div class="spotlight-proof">✓ 3 propositions originales · retouches illimitées</div>
           </div>
           <div class="spotlight-visual">
             <img src="images/logo_section.png" alt="Exemple d'identité visuelle — NextLink Studio" class="spotlight-img" />
@@ -257,6 +225,7 @@
       <div class="container">
         <div class="spotlight-row">
           <div class="spotlight-text">
+            <span class="spotlight-num">03</span>
             <div class="section-badge">📱 Réseaux sociaux</div>
             <h3>Vos chantiers mis en valeur,<br /><span class="gradient-text">vos clients convaincus</span></h3>
             <p>Je rédige et publie des contenus qui montrent votre savoir-faire — avant/après de chantiers, témoignages clients, astuces métier. Vos futurs clients voient du concret et vous contactent directement.</p>
@@ -267,6 +236,7 @@
               <li><span class="sl-check">✓</span> Rapport mensuel de performance</li>
             </ul>
             <a href="posts-linkedin.html" class="btn btn-primary">Voir l'offre réseaux sociaux →</a>
+            <div class="spotlight-proof">✓ Contenus planifiés 2 semaines à l'avance</div>
           </div>
           <div class="spotlight-visual">
             <img src="images/reseau_sociaux_section.png" alt="Exemple de posts réseaux sociaux — NextLink Studio" class="spotlight-img" />
@@ -280,6 +250,7 @@
       <div class="container">
         <div class="spotlight-row spotlight-row--reverse">
           <div class="spotlight-text">
+            <span class="spotlight-num">04</span>
             <div class="section-badge">🖨️ Création print</div>
             <h3>Des supports qui restent<br /><span class="gradient-text">dans les mains de vos clients</span></h3>
             <p>Une carte de visite laissée sur place, un flyer dans les boîtes aux lettres du quartier, un kakémono sur votre chantier — le print prolonge votre visibilité là où internet ne suffit pas.</p>
@@ -290,6 +261,7 @@
               <li><span class="sl-check">✓</span> Retouches illimitées avant validation</li>
             </ul>
             <a href="creation-print.html" class="btn btn-primary">Voir l'offre print →</a>
+            <div class="spotlight-proof">✓ Fichiers prêts à l'impression livrés sous 72h</div>
           </div>
           <div class="spotlight-visual">
             <img src="images/print_section.png" alt="Exemple de création print — NextLink Studio" class="spotlight-img" />
@@ -304,8 +276,8 @@
   <section class="how" id="comment">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">Simple & rapide</div>
-        <h2>Votre projet livré<br /><span class="gradient-text">en 3 étapes</span></h2>
+        <div class="section-badge">Simple & sans prise de tête</div>
+        <h2>Comment ça se passe,<br /><span class="gradient-text">pour chaque service</span></h2>
       </div>
       <div class="steps">
         <div class="step">
@@ -315,30 +287,30 @@
           </div>
           <div class="step-icon-badge">📞</div>
           <div class="step-content">
-            <h3>Échange de 30 min</h3>
-            <p>Je discute de votre activité, de vos clients cibles, de votre zone géographique. Je cerne exactement ce dont vous avez besoin.</p>
+            <h3>On fait le point ensemble</h3>
+            <p>En 30 minutes, je cerne votre activité, vos clients cibles et ce dont vous avez vraiment besoin. Pas de formulaire interminable — juste une vraie conversation.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-head">
             <div class="step-num">02</div>
-            <span class="step-timing">Jours 1 – 6</span>
+            <span class="step-timing">Création</span>
           </div>
           <div class="step-icon-badge">✏️</div>
           <div class="step-content">
             <h3>Je crée, vous validez</h3>
-            <p>Je conçois votre site et vous montre l'avancement. Vous donnez votre avis, j'ajuste jusqu'à ce que ce soit parfait.</p>
+            <p>Je travaille sur votre projet et vous montre l'avancement à chaque étape. Vous donnez votre avis, j'ajuste — jusqu'à ce que ce soit exactement ce que vous voulez.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-head">
             <div class="step-num">03</div>
-            <span class="step-timing">Jour 7 ✦</span>
+            <span class="step-timing">Livraison ✦</span>
           </div>
           <div class="step-icon-badge">🚀</div>
           <div class="step-content">
             <h3>Livraison & suivi</h3>
-            <p>Tout est livré en 7 jours. Je vous remets chaque fichier, m'assure que tout fonctionne, et reste disponible pour la suite.</p>
+            <p>Je vous remets tous vos fichiers, m'assure que tout est parfait, et reste disponible après la livraison. Vous êtes autonome — et je suis là si besoin.</p>
           </div>
         </div>
       </div>
@@ -348,14 +320,38 @@
     </div>
   </section>
 
+  <!-- RÉSULTATS -->
+  <section class="resultats">
+    <div class="container">
+      <div class="resultats-grid">
+        <div class="resultat-item">
+          <span class="resultat-num">+5</span>
+          <span class="resultat-label">artisans et indépendants accompagnés</span>
+        </div>
+        <div class="resultat-item">
+          <span class="resultat-num">1</span>
+          <span class="resultat-label">interlocuteur unique du brief à la livraison</span>
+        </div>
+        <div class="resultat-item">
+          <span class="resultat-num">4.9</span>
+          <span class="resultat-label">note de satisfaction sur 5 en moyenne</span>
+        </div>
+        <div class="resultat-item">
+          <span class="resultat-num">100%</span>
+          <span class="resultat-label">des projets livrés dans les délais annoncés</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- RÉALISATIONS APERÇU -->
   <section class="realisations-preview">
     <div class="container">
       <div class="section-header">
-        <div class="section-badge">Réalisations</div>
+        <div class="section-badge">Ils me font confiance</div>
         <h2>Ils ont digitalisé leur activité<br />et <span class="gradient-text">gagnent du temps au quotidien.</span></h2>
       </div>
-      <div class="portfolio-grid--double">
+      <div class="portfolio-grid--triple">
         <a href="etude-de-cas-elec-prime.html" class="portfolio-card--featured">
           <div class="portfolio-featured-img">
             <img src="images/mockup_macbook_elecprime.jpg" alt="Élec Prime — site web électricien Île-de-France">
@@ -382,12 +378,26 @@
             <div class="portfolio-result portfolio-result--link">Voir l'étude de cas →</div>
           </div>
         </a>
+        <a href="#" class="portfolio-card--featured">
+          <div class="portfolio-featured-img">
+            <img src="images/realisation_bois.png" alt="Réalisation menuiserie — NextLink Studio">
+          </div>
+          <div class="portfolio-featured-info">
+            <div class="portfolio-featured-left">
+              <span class="portfolio-tag portfolio-tag--wood">Menuiserie</span>
+              <h4>Atelier Moreau</h4>
+              <p>Identité visuelle</p>
+            </div>
+            <div class="portfolio-result portfolio-result--link">Voir l'étude de cas →</div>
+          </div>
+        </a>
       </div>
       <div class="text-center" style="margin-top:40px">
         <a href="realisations.html" class="btn btn-outline btn-lg">Voir toutes mes réalisations →</a>
       </div>
     </div>
   </section>
+
 
   <!-- TÉMOIGNAGES -->
   <section class="testimonials-section">
@@ -485,41 +495,6 @@
     </div>
   </section>
 
-  <!-- LOGOS CLIENTS -->
-  <div class="logos-strip">
-    <div class="container">
-      <p class="logos-strip-label">Ils me font confiance</p>
-      <div class="logos-strip-row">
-        <div class="logo-item">Élec Prime</div>
-        <div class="logo-item">Vert-Nature</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- RÉSULTATS -->
-  <section class="resultats">
-    <div class="container">
-      <div class="resultats-grid">
-        <div class="resultat-item">
-          <span class="resultat-num">+30</span>
-          <span class="resultat-label">artisans et indépendants accompagnés</span>
-        </div>
-        <div class="resultat-item">
-          <span class="resultat-num">7 j</span>
-          <span class="resultat-label">délai moyen entre brief et mise en ligne</span>
-        </div>
-        <div class="resultat-item">
-          <span class="resultat-num">4.9</span>
-          <span class="resultat-label">note de satisfaction sur 5 en moyenne</span>
-        </div>
-        <div class="resultat-item">
-          <span class="resultat-num">100%</span>
-          <span class="resultat-label">des projets livrés dans les délais annoncés</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section class="faq-section" id="faq">
     <div class="container">
@@ -606,6 +581,19 @@
     </div>
   </section>
 
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="container cta-final-inner">
+      <div class="cta-final-badge">Sans engagement · Réponse sous 24h</div>
+      <h2 class="cta-final-title">Prêt à vous lancer ?</h2>
+      <p class="cta-final-sub">Décrivez votre projet en 2 minutes. Je reviens vers vous avec une proposition claire, sans jargon et sans surprise.</p>
+      <div class="cta-final-actions">
+        <a href="devis.html" class="btn btn-primary btn-lg">Obtenir mon devis gratuit →</a>
+        <a href="tarifs.html" class="btn btn-ghost btn-lg">Voir les tarifs</a>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -613,8 +601,16 @@
         <a href="index.html" class="logo"><img src="logo_nextlink_studio.svg" alt="NextLink Studio"></a>
         <p>J'aide les artisans et indépendants à se faire connaître en ligne — rapidement, simplement, efficacement.</p>
         <div class="footer-social">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
         </div>
       </div>
       <div class="footer-links">
@@ -630,6 +626,7 @@
         <h5>Agence</h5>
         <ul>
           <li><a href="realisations.html">Mes réalisations</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
           <li><a href="tarifs.html">Tarifs</a></li>
           <li><a href="devis.html">Devis gratuit</a></li>
         </ul>

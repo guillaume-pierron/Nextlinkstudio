@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mes réalisations — NextLink Studio</title>
-  <meta name="description" content="Découvrez les sites web, logos et stratégies LinkedIn créés par NextLink Studio pour des artisans et indépendants partout en France." />
+  <title>À propos — NextLink Studio</title>
+  <meta name="description" content="Je m'appelle Guillaume. J'aide les artisans et indépendants à se faire connaître en ligne — rapidement, sans prise de tête, à un prix juste." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800;900&display=swap" rel="stylesheet" />
@@ -48,9 +48,9 @@
             </div>
           </div>
         </li>
-        <li><a href="realisations.html" class="active">Mes réalisations</a></li>
+        <li><a href="realisations.html">Mes réalisations</a></li>
         <li><a href="tarifs.html">Tarifs</a></li>
-        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="a-propos.html" class="active">À propos</a></li>
       </ul>
       <a href="devis.html" class="btn btn-primary nav-cta">Devis gratuit</a>
       <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
@@ -88,59 +88,98 @@
   <section class="page-hero">
     <div class="page-hero-bg"></div>
     <div class="container page-hero-content">
-      <div class="page-breadcrumb"><a href="index.html">Accueil</a> / <span>Mes réalisations</span></div>
-      <h1>Mes <span class="gradient-text">réalisations</span></h1>
-      <p>Les projets que j'ai construits, de A à Z. Chaque site, chaque identité, chaque résultat.</p>
+      <div class="page-breadcrumb"><a href="index.html">Accueil</a> / <span>À propos</span></div>
+      <h1>À propos de <span class="gradient-text">NextLink Studio</span></h1>
+      <p>Je construis des présences digitales pour les artisans qui méritent d'être vus.</p>
     </div>
   </section>
 
-  <!-- GRILLE RÉALISATIONS -->
-  <section class="realisations-full">
+  <!-- ABOUT PRINCIPAL -->
+  <section class="about-section">
     <div class="container">
-      <div class="portfolio-grid--triple">
+      <div class="about-grid">
+        <div class="about-photo-wrap">
+          <img src="images/guillaume.png" alt="Guillaume — NextLink Studio">
+        </div>
+        <div class="about-text">
+          <h2 class="about-heading">Moi c'est <span class="gradient-text">Guillaume.</span></h2>
+          <p class="about-lead">Designer web et spécialiste marketing digital — j'aide les artisans à ne plus perdre de chantiers par manque de visibilité.</p>
+          <p>Avant de fonder NextLink Studio, j'ai passé plus de 5 ans en entreprise : d'abord comme designer web et infographiste — conception de sites, intégration HTML/CSS, design graphique — puis comme chef de projet marketing digital, en pilotant la présence en ligne, les réseaux sociaux et les supports print d'une structure B2B.</p>
+          <p>Cette double expérience, c'est ce qui change tout : je ne pense pas qu'au design. Je pense à ce que chaque choix visuel produit comme résultat — est-ce que ça attire des clients ? Est-ce que ça inspire confiance ? Est-ce que ça convertit ?</p>
+          <p>Depuis 2024, j'applique ce que j'ai appris en entreprise au service des artisans. Chaque projet est traité en direct, sans intermédiaire. Vous avez une question, vous me la posez à moi. Vous attendez une livraison, c'est moi qui livre.</p>
+          <div class="about-xp-chips">
+            <span class="about-xp-chip">🎨 +5 ans en design & marketing digital</span>
+            <span class="about-xp-chip">💻 Intégration HTML / CSS</span>
+            <span class="about-xp-chip">📣 Chef de projet marketing digital</span>
+            <span class="about-xp-chip">🚀 Fondateur NextLink Studio depuis 2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <a href="etude-de-cas-elec-prime.html" class="portfolio-card--featured">
-          <div class="portfolio-featured-img">
-            <img src="images/mockup_macbook_elecprime.jpg" alt="Élec Prime — site web électricien Île-de-France">
-          </div>
-          <div class="portfolio-featured-info">
-            <div class="portfolio-featured-left">
-              <span class="portfolio-tag portfolio-tag--gold">Électricité</span>
-              <h4>Élec Prime</h4>
-              <p>Site web + identité visuelle + réservation en ligne · Île-de-France</p>
-            </div>
-            <div class="portfolio-result portfolio-result--link">Voir l'étude de cas →</div>
-          </div>
-        </a>
+  <!-- CITATION -->
+  <section class="about-quote-section">
+    <div class="container">
+      <blockquote class="about-quote">
+        <span class="about-quote-mark">❝</span>
+        <p>Je ne crée pas de beaux sites pour le plaisir. Je crée des outils qui remplissent votre agenda — et qui travaillent pour vous quand vous êtes sur le chantier.</p>
+        <cite>Guillaume, fondateur de NextLink Studio</cite>
+      </blockquote>
+    </div>
+  </section>
 
-        <a href="etude-de-cas-vert-nature.html" class="portfolio-card--featured">
-          <div class="portfolio-featured-img">
-            <img src="images/mockup_macbook_vert_nature.jpg" alt="Vert-Nature — site web jardinier paysagiste">
-          </div>
-          <div class="portfolio-featured-info">
-            <div class="portfolio-featured-left">
-              <span class="portfolio-tag portfolio-tag--green">Paysagisme</span>
-              <h4>Vert-Nature</h4>
-              <p>Site web + identité visuelle · France</p>
-            </div>
-            <div class="portfolio-result portfolio-result--link">Voir l'étude de cas →</div>
-          </div>
-        </a>
+  <!-- VALEURS -->
+  <section class="about-values">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Ma façon de travailler</div>
+        <h2>Trois principes qui <span class="gradient-text">guident chaque projet</span></h2>
+      </div>
+      <div class="about-values-grid">
+        <div class="about-value-card">
+          <div class="about-value-icon">⚡</div>
+          <h3>Rapidité</h3>
+          <p>Votre site en ligne en 7 jours. Votre logo en 72h. Pas de délais qui s'étirent sur des semaines pendant que vous perdez des clients.</p>
+        </div>
+        <div class="about-value-card">
+          <div class="about-value-icon">💬</div>
+          <h3>Clarté</h3>
+          <p>Zéro jargon, zéro mauvaise surprise. Un devis clair, un tarif fixe, des livrables précis. Vous savez exactement ce que vous recevez avant de signer.</p>
+        </div>
+        <div class="about-value-card">
+          <div class="about-value-icon">🎯</div>
+          <h3>Résultats</h3>
+          <p>Je ne crée pas de beaux objets pour le plaisir. Je crée des outils qui génèrent des contacts, des appels et des chantiers pour votre activité.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <a href="#" class="portfolio-card--featured">
-          <div class="portfolio-featured-img">
-            <img src="images/realisation_bois.png" alt="Réalisation menuiserie — NextLink Studio">
+  <!-- TÉMOIGNAGES -->
+  <section class="about-testimonials-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">Témoignages</div>
+        <h2>Ce qu'ils disent de <span class="gradient-text">travailler avec moi</span></h2>
+      </div>
+      <div class="about-testimonials-grid">
+        <div class="about-testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"Guillaume parle vraiment notre langue. Pas de blabla technique, il a compris mon métier et livré exactement ce que je voulais en une semaine."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TB</div>
+            <div><strong>Thomas B.</strong><span>Menuisier — Nantes</span></div>
           </div>
-          <div class="portfolio-featured-info">
-            <div class="portfolio-featured-left">
-              <span class="portfolio-tag portfolio-tag--wood">Menuiserie</span>
-              <h4>Atelier Moreau</h4>
-              <p>Identité visuelle · France</p>
-            </div>
-            <div class="portfolio-result portfolio-result--link">Voir l'étude de cas →</div>
+        </div>
+        <div class="about-testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p>"En 3 semaines, j'avais déjà reçu 15 demandes de devis via mon site. Avant, j'étais invisible sur internet. Je regrette de ne pas l'avoir fait plus tôt."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">CM</div>
+            <div><strong>Christophe M.</strong><span>Plombier — Lyon</span></div>
           </div>
-        </a>
-
+        </div>
       </div>
     </div>
   </section>
@@ -149,11 +188,11 @@
   <section class="page-cta">
     <div class="container">
       <div class="page-cta-inner">
-        <h2>Votre réalisation sera la prochaine.</h2>
-        <p>Rejoignez les artisans qui ont fait confiance à NextLink Studio.</p>
+        <h2>On travaille ensemble ?</h2>
+        <p>Décrivez votre projet en 2 minutes. Je reviens vers vous avec une proposition claire, sans jargon et sans engagement.</p>
         <div class="page-cta-actions">
           <a href="devis.html" class="btn btn-primary btn-lg">Demander mon devis gratuit</a>
-          <a href="tarifs.html" class="btn btn-ghost btn-lg">Voir les tarifs →</a>
+          <a href="realisations.html" class="btn btn-ghost btn-lg">Voir mes réalisations →</a>
         </div>
       </div>
     </div>
@@ -193,7 +232,7 @@
           <li><a href="realisations.html">Mes réalisations</a></li>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="tarifs.html">Tarifs</a></li>
-          <li><a href="devis.html">Contact</a></li>
+          <li><a href="devis.html">Devis gratuit</a></li>
         </ul>
       </div>
       <div class="footer-links">
@@ -206,7 +245,7 @@
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>© 2024 NextLink Studio — Tous droits réservés</p>
+      <p>© 2026 NextLink Studio — Tous droits réservés</p>
       <div class="footer-legal">
         <a href="#">Mentions légales</a>
         <a href="#">Politique de confidentialité</a>

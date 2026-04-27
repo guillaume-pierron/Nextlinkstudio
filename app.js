@@ -146,12 +146,15 @@ document.querySelectorAll(
   if (!carousel || !track) return;
 
   const SPEED = 0.6; // px par frame (~36 px/s à 60 fps)
-  let halfWidth  = 0;
-  let position   = 0;
-  let paused     = false;
-  let isDragging = false;
-  let lastX      = 0;
-  let velocity   = 0;
+  let halfWidth        = 0;
+  let position         = 0;
+  let paused           = false;
+  let isDragging       = false;
+  let lastX            = 0;
+  let velocity         = 0;
+  let touchStartX      = 0;
+  let touchStartY      = 0;
+  let touchDirectionLocked = null; // 'h' | 'v' | null
 
   function wrap(pos) {
     if (halfWidth === 0) return 0;
@@ -201,13 +204,25 @@ document.querySelectorAll(
 
   // Tactile
   carousel.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchDirectionLocked = null;
     paused = true;
     startDrag(e.touches[0].clientX);
   }, { passive: true });
   carousel.addEventListener('touchmove', e => {
-    if (isDragging) { moveDrag(e.touches[0].clientX); e.preventDefault(); }
+    if (!isDragging) return;
+    if (touchDirectionLocked === null) {
+      const dx = Math.abs(e.touches[0].clientX - touchStartX);
+      const dy = Math.abs(e.touches[0].clientY - touchStartY);
+      if (dx > 6 || dy > 6) touchDirectionLocked = dx > dy ? 'h' : 'v';
+    }
+    if (touchDirectionLocked === 'h') {
+      moveDrag(e.touches[0].clientX);
+      e.preventDefault();
+    }
   }, { passive: false });
-  window.addEventListener('touchend', () => { endDrag(); paused = false; });
+  window.addEventListener('touchend', () => { endDrag(); paused = false; touchDirectionLocked = null; });
 
   function init() {
     halfWidth = track.scrollWidth / 2;
@@ -215,6 +230,37 @@ document.querySelectorAll(
   }
   if (document.readyState === 'complete') { init(); }
   else { window.addEventListener('load', init); }
+})();
+
+/* ── RÉALISATIONS PREVIEW — cascade reveal ── */
+(function () {
+  const grid = document.querySelector('.realisations-preview .portfolio-grid--triple');
+  if (!grid) return;
+  const gridObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        gridObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  gridObserver.observe(grid);
+})();
+
+/* ── SPOTLIGHT VISUAL REVEAL + FLOAT ── */
+(function () {
+  const spotlightObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        spotlightObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.spotlight-visual').forEach(el => {
+    spotlightObserver.observe(el);
+  });
 })();
 
 /* ── EXPERTISE NAV ACTIVE ON SCROLL ── */
